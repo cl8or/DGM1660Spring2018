@@ -1,0 +1,16 @@
+*.mb
+*.swatches
+*.pyc
+*.spp
+*.assbin
+*.mtl
+*.exr
+*.swatch
+*.iff
+*.tx
+*.tif
+
+incrementalSave/
+images/tmp/
+
+
