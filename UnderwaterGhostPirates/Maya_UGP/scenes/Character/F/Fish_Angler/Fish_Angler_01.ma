@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Fish_Angler_01.ma
-//Last modified: Thu, Apr 26, 2018 09:16:59 PM
+//Last modified: Thu, Apr 26, 2018 09:45:30 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,8 +13,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C4ADF3F6-B648-4C75-DEE1-8986F2734256";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.102006789474874 14.627430205068784 -34.896523487221529 ;
-	setAttr ".r" -type "double3" 162.86164757386888 16.400000000000915 -179.99999999998914 ;
+	setAttr ".t" -type "double3" 32.734590158553097 12.570869744972532 -19.849887779088839 ;
+	setAttr ".r" -type "double3" 165.86164757388167 55.600000000000882 -179.9999999999809 ;
 	setAttr ".rp" -type "double3" 2.2204460492503131e-16 0 8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" -2.5465472641387114e-15 5.4058099649467538e-16 2.1623920053728122e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
