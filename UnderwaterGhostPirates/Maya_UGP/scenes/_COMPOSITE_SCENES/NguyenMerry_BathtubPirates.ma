@@ -1,10 +1,36 @@
 //Maya ASCII 2017ff05 scene
 //Name: NguyenMerry_BathtubPirates.ma
-//Last modified: Tue, May 01, 2018 02:28:07 PM
+//Last modified: Tue, May 01, 2018 03:31:44 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cannon" -dr 1 -rfn "CannonRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/C/Cannon/Cannon.ma";
+file -rdi 1 -ns "Crab" -rfn "CrabRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/C/Crab/Crab.ma";
+file -rdi 1 -ns "anchor_Final" -rfn "anchor_FinalRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Prop/A/Anchor/anchor_Final.ma";
+file -rdi 1 -ns "Fish_Angler_01" -rfn "Fish_Angler_01RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/F/Fish_Angler/Fish_Angler_01.ma";
+file -rdi 1 -ns "KrakenandSkeleton_Colored_Done_NOPOSEORRIG" -rfn "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN"
+		 -op "v=0;" -typ "mayaAscii" "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/K/KrakenSkeleton/KrakenandSkeleton_Colored_Done_NOPOSEORRIG.ma";
+file -rdi 1 -ns "Shark_GreatWhite_model_007" -rfn "Shark_GreatWhite_model_007RN"
+		 -op "v=0;" -typ "mayaAscii" "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/S/Shark_GreatWhite/01-Model/Shark_GreatWhite_model_007.ma";
+file -rdi 1 -ns "hammerheadshark" -rfn "hammerheadsharkRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/S/Shark_Hammerhead/hammerheadshark.ma";
 file -r -ns "Cannon" -dr 1 -rfn "CannonRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/C/Cannon/Cannon.ma";
+file -r -ns "Crab" -dr 1 -rfn "CrabRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/C/Crab/Crab.ma";
+file -r -ns "anchor_Final" -dr 1 -rfn "anchor_FinalRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Prop/A/Anchor/anchor_Final.ma";
+file -r -ns "Fish_Angler_01" -dr 1 -rfn "Fish_Angler_01RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/F/Fish_Angler/Fish_Angler_01.ma";
+file -r -ns "KrakenandSkeleton_Colored_Done_NOPOSEORRIG" -dr 1 -rfn "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN"
+		 -op "v=0;" -typ "mayaAscii" "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/K/KrakenSkeleton/KrakenandSkeleton_Colored_Done_NOPOSEORRIG.ma";
+file -r -ns "Shark_GreatWhite_model_007" -dr 1 -rfn "Shark_GreatWhite_model_007RN"
+		 -op "v=0;" -typ "mayaAscii" "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/S/Shark_GreatWhite/01-Model/Shark_GreatWhite_model_007.ma";
+file -r -ns "hammerheadshark" -dr 1 -rfn "hammerheadsharkRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Users/10807196/Documents/GitKraken/DGM1660Spring2018/UnderwaterGhostPirates/Maya_UGP//scenes/Character/S/Shark_Hammerhead/hammerheadshark.ma";
 requires maya "2017ff05";
+requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "PxrCamera"
+		 -nodeType "PxrVCM" -nodeType "PxrOcclusion" -nodeType "PxrValidateBxdf" -nodeType "PxrPathTracer"
+		 -nodeType "OmnidirectionalStereo" -nodeType "PxrDefault" -nodeType "PxrDirectLighting"
+		 -nodeType "PxrVisualizer" "RenderMan_for_Maya" "21.6";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2017";
@@ -15,8 +41,8 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "5DD49A40-4D1D-A1D6-7E3B-95BC577B8496";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 14.893655414754871 2.7042940665279374 -14.527389704020361 ;
-	setAttr ".r" -type "double3" 362.06164726964192 -234.99999999995978 359.99999999999653 ;
+	setAttr ".t" -type "double3" -148.55532637474548 85.939244994736185 -16.503563478354966 ;
+	setAttr ".r" -type "double3" 338.06164726885692 -451.80000000000115 360.00000000046282 ;
 	setAttr ".rp" -type "double3" -3.5527136788005009e-015 0 -7.1054273576010019e-015 ;
 	setAttr ".rpt" -type "double3" -4.7365318885737317e-016 5.2983500790172605e-015 
 		6.0277750529961478e-015 ;
@@ -24,7 +50,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C94AE094-486D-E37D-420D-24BA611AADAD";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 26.208249516115711;
+	setAttr ".coi" 169.24491900717931;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1625,6 +1651,8 @@ createNode mesh -n "pCylinderShape4" -p "transform4";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pCube2";
 	rename -uid "65307BA3-4556-5C09-5428-22A4541C432D";
+	setAttr ".t" -type "double3" -1.4804857566829206 -6.073934305884789 0 ;
+	setAttr ".s" -type "double3" 6.0531920484288975 6.0531920484288975 6.0531920484288975 ;
 	setAttr ".rp" -type "double3" 0 2.9070996780617802 0 ;
 	setAttr ".sp" -type "double3" 0 2.9070996780617802 0 ;
 createNode mesh -n "pCube2Shape" -p "pCube2";
@@ -1639,20 +1667,362 @@ createNode mesh -n "pCube2Shape" -p "pCube2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "group1";
+	rename -uid "4499DF83-4303-C9A6-D47C-539B5C36AF5C";
+	setAttr ".t" -type "double3" 0 0.19142343854884025 -23.62676001134713 ;
+createNode transform -n "AnglerFish";
+	rename -uid "EF03FA0E-4098-E9BD-B12E-64B17399DAE3";
+	setAttr ".t" -type "double3" 13.484172806842958 0 0 ;
+	setAttr ".r" -type "double3" 0 86.63048649041761 0 ;
+	setAttr ".s" -type "double3" 1.8902198376982673 1.8902198376982673 1.8902198376982673 ;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7";
+	rename -uid "FE303A91-4AE8-B347-E68A-B588B63B21BD";
+	setAttr ".t" -type "double3" 24.162777605689463 23.792470383823542 -27.160181761468106 ;
+	setAttr ".s" -type "double3" 0.49341022130356182 0.56192654442827561 0.65069129106407952 ;
+	setAttr ".rp" -type "double3" 0 11.096589297056198 2.2434605062007904 ;
+	setAttr ".sp" -type "double3" 0 11.096589297056198 2.2434605062007904 ;
+createNode mesh -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape" 
+		-p "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7";
+	rename -uid "B13A5E68-4773-0B62-3D6A-E9AC529C6F52";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode fosterParent -n "Fish_Angler_01RNfosterParent1";
+	rename -uid "82B292AD-4A05-9369-03AE-9BA88A49AA86";
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197" 
+		-p "Fish_Angler_01RNfosterParent1";
+	rename -uid "F7B82CE0-4A5E-7859-F2E7-D79105DB7B3C";
+	setAttr ".v" no;
+createNode fosterParent -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "7FAC2596-4DC9-7218-9EAA-E5B16A85E84D";
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform179" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "C21FCC6D-44B4-7F95-978A-F3B28D73EFA1";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform178" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "24DE626A-4D44-2BE4-CD84-44A826971935";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform177" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "2367C6C2-4358-DA98-996B-1F8F59A9677F";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform176" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "73113939-4162-B6DE-8A82-DABB43E0BA0B";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform183" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B658F0A0-4801-7142-8AAC-40A630F30359";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform182" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "8FC7494C-4EB3-6396-D9A5-1D9D48252863";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform181" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "717DDFBC-4418-BDBF-AA30-C9994B9591D6";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform180" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "200F8EC3-4ED8-0C2D-A97F-00BE8C00DB70";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform175" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "296EC50E-43A2-F15E-08EC-7196149EBC05";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform174" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "67659C1D-4A01-7432-034F-CBABF4F5871C";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform173" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "C5C80554-4193-B05E-7DBB-B48707870629";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform172" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "6D4CEDF2-451D-78E5-6C88-18AF153F4B87";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform171" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "5F46B07A-4D63-A93B-4DC4-7FB27123A6F9";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform170" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "84A26201-4BFE-EC14-E66B-428440A22EA1";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform169" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "63A4E720-400A-A378-ADC5-86B5CAF2635A";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform168" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "840F4605-4B3F-EB43-4626-D29A02F95BD5";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform167" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "DCF7B166-4DB5-0025-1220-C3A7B78FF4EB";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform156" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "751A27BF-417C-2FEA-6DFA-8C9359ECA4AE";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform155" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "4E62A277-4322-E5B3-4E05-4BB55734844F";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform154" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "AE09ED58-4F5B-1EE0-871B-699ED6410DC7";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform153" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "6AB6546F-4FFE-4DB9-CA94-AEB86ECBDE21";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform152" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "29714A82-4DD3-D2FB-B728-FB8EB98225B9";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform166" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "1DA5AD55-4515-3A20-56B8-99858A77FC5A";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform165" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "AC8C7891-4518-5110-0CC2-5E9F81DD6F19";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform164" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B78BB7A3-4B52-5073-55C1-E697E6F7CE0E";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform163" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B07F0907-40EF-271E-F662-4B91EB9B1140";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform162" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "66EBEAEF-4CBD-822B-6249-7993B33024C6";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform161" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "C61FAB8B-4495-3996-052A-C094AE11BBED";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform160" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "CE3F592C-4B66-A2E3-2675-15A5D05D391A";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform159" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "73B747A2-43CE-13DE-BA44-7B9D06A1C8E9";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform158" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "5800D76F-4EAE-9352-02DD-AD9002FEB37A";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform157" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B6559D4C-4A89-3B1B-E05C-2D992A03F62C";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform151" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "E99B9CDC-4DC9-06B5-478F-0E9F1920043B";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform150" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "815F1EFA-476B-C804-1739-AA97A504D186";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform149" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "0106CCC6-439D-5ED1-C697-4CA25DD127CF";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform148" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "4512D12D-4DF4-F68C-28F3-3E91972C8D3C";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform147" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "7BBC7068-4494-50B1-6580-9A9B5E293DDA";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform146" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "D917C350-43EF-0619-8870-718479BBDDDD";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform145" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "D9D215A5-4F22-DECA-39FE-D0ADFA06283C";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform144" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B4894B6F-484E-6292-83AB-5E906D13E5A1";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform143" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "DAD63CED-4CBC-D499-5081-05AEB8F2B46A";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform142" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "45E9D56D-4D78-63EC-2332-F6BF783F0F33";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform141" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "E96C3F4E-4A47-3B67-FC7D-68B9E472FAF5";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform140" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B48B6789-432C-8956-2F4B-91935DB067F0";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform139" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "1DCE595A-42BD-B1D9-D492-41970BD72D77";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform138" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "176C0051-49B6-A83E-7CEC-7DA1EA92B03F";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform137" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "4F22B959-4D0D-ED7D-EBE2-E18F56232591";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform136" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "BE26A260-4BDB-A4AA-DDBC-EABD41830115";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform135" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "9C400042-46DE-169D-6EED-C5AB93855231";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform134" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B16898E8-41AB-E132-8080-FC9394330311";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform133" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "D271AB70-4CA4-030B-6AAE-C3BDA2FDACF1";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform132" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "67B5CE9B-43B0-FE19-6715-3DBBEF58FBDD";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform131" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "55C78415-4B7A-E434-6BA7-2DA836FC93C4";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform130" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "C168A9C8-4F52-1854-CA58-6AADF7969174";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform129" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "7CAED1E0-469D-0A5E-2FCD-82B5EEDFD046";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "41D161AA-4EF9-E428-8705-36B8D797EC3A";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "822D7C28-4A48-87B1-9BAA-A2AC82665A3B";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "23AFE479-4770-556F-3E89-4C84EE5E0FA2";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "CDE7F245-4B31-9F64-116C-89B108810B13";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "BBD73350-4FBC-FF48-9780-CC9082D829DA";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "5CFC6EE9-4CE9-95EC-0841-7F9FEA0BE754";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B63001CD-452C-3ABE-37A2-EB9511C2888B";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "611F2595-4032-7C47-037D-FAACD3E1C312";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "6177A7E0-42CC-72E3-FD7F-1B889D5C8AB4";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "58402DEC-46A0-531A-0D27-E0AA9823E6A0";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "8BBDBFA3-48FC-0CC7-1ADB-3DABBCA9CD6A";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "757648FF-4B44-9B1E-C1E7-F693A03E4C08";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B45C85BA-49ED-4B9D-679B-319C4092A899";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "DE098D1D-4F9B-D60D-5D04-B0BFD2FB3702";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "56C147F7-4FB9-340C-4B9B-ED96DF232A38";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "F4EDD434-4990-39E5-E987-37B5A7D228DF";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "B4888ED8-4E41-ED87-3702-0C8F9031020F";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "18612624-4232-8649-8541-A18651C74E17";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "292151C6-4CB7-3C65-BFED-0F8658412E2F";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "925ED502-4394-F531-7D8F-68AC2DB8CD60";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "A1B4199B-4167-DA54-27D9-FCA171F8FCAE";
+	setAttr ".v" no;
+createNode transform -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184" 
+		-p "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1";
+	rename -uid "A9EC7A43-4547-EBCE-A32F-A8AE91358D57";
+	setAttr ".v" no;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9CBCA1AE-4A42-C748-AD25-F0979100B62D";
-	setAttr -s 3 ".lnk";
-	setAttr -s 3 ".slnk";
+	rename -uid "DD80E645-42F7-16C8-6DF0-56B538D693DD";
+	setAttr -s 22 ".lnk";
+	setAttr -s 22 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DED75F87-4D3B-E2D4-58FB-8A9BCD656309";
+	rename -uid "33434060-4C05-34A8-2608-AE9155BAA1FA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3E8A1288-4FB7-B859-F45B-59B58B4605CD";
+	rename -uid "C5398590-4B58-C8A4-12A1-9ABD04575005";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "53EF6263-4345-F4EC-065A-7A9F298065CE";
+	rename -uid "00EB3B79-4BAF-C463-5022-48A2E1E2ECF7";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "EACED85B-43FB-5E15-62AB-AC8A8B6525A4";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "05E68BC3-4828-BF2E-3B62-6D8242FB312A";
+	rename -uid "E297B2CF-4781-749D-2EF7-2EBD73512DC2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5BBDB9DB-41F2-D410-E1AC-91A77DF6C37E";
 	setAttr ".g" yes;
@@ -1722,19 +2092,11 @@ createNode polyExtrudeFace -n "polyExtrudeFace4";
 createNode polyTweak -n "polyTweak3";
 	rename -uid "6A7CB043-4E65-3EC9-B110-C5A5A26991E1";
 	setAttr ".uopa" yes;
-	setAttr -s 13 ".tk";
-	setAttr ".tk[24]" -type "float3" -0.16964827 0 -0.17749919 ;
-	setAttr ".tk[25]" -type "float3" -0.20764349 0 -0.15104562 ;
-	setAttr ".tk[26]" -type "float3" -0.20764349 0 0.15104562 ;
-	setAttr ".tk[27]" -type "float3" -0.16964827 0 0.17749919 ;
-	setAttr ".tk[28]" -type "float3" -0.080841146 0 0.16243087 ;
-	setAttr ".tk[29]" -type "float3" 0.080841146 0 0.16243087 ;
-	setAttr ".tk[30]" -type "float3" 0.16964827 0 0.17749919 ;
-	setAttr ".tk[31]" -type "float3" 0.20764349 0 0.15104562 ;
-	setAttr ".tk[32]" -type "float3" 0.20764349 0 -0.15104562 ;
-	setAttr ".tk[33]" -type "float3" 0.16964827 0 -0.17749919 ;
-	setAttr ".tk[34]" -type "float3" 0.080841146 0 -0.16243087 ;
-	setAttr ".tk[35]" -type "float3" -0.080841146 0 -0.16243087 ;
+	setAttr -s 12 ".tk[24:35]" -type "float3"  -0.16964827 0 -0.17749919
+		 -0.20764349 0 -0.15104562 -0.20764349 0 0.15104562 -0.16964827 0 0.17749919 -0.080841146
+		 0 0.16243087 0.080841146 0 0.16243087 0.16964827 0 0.17749919 0.20764349 0 0.15104562
+		 0.20764349 0 -0.15104562 0.16964827 0 -0.17749919 0.080841146 0 -0.16243087 -0.080841146
+		 0 -0.16243087;
 createNode polyExtrudeFace -n "polyExtrudeFace3";
 	rename -uid "9A4F2332-4C92-EF3F-58F2-21BB9E9C40FD";
 	setAttr ".ics" -type "componentList" 1 "f[16]";
@@ -1752,15 +2114,9 @@ createNode deleteComponent -n "deleteComponent1";
 createNode polyTweak -n "polyTweak2";
 	rename -uid "7A553266-4146-0857-D16C-A6A5A17D1361";
 	setAttr ".uopa" yes;
-	setAttr -s 10 ".tk";
-	setAttr ".tk[16]" -type "float3" 0 0 0.081430167 ;
-	setAttr ".tk[17]" -type "float3" 0 0 -0.081430167 ;
-	setAttr ".tk[18]" -type "float3" 0 0 0.081430167 ;
-	setAttr ".tk[19]" -type "float3" 0 0 -0.081430167 ;
-	setAttr ".tk[20]" -type "float3" 0 0 0.081430167 ;
-	setAttr ".tk[21]" -type "float3" 0 0 -0.081430167 ;
-	setAttr ".tk[22]" -type "float3" 0 0 -0.081430167 ;
-	setAttr ".tk[23]" -type "float3" 0 0 0.081430167 ;
+	setAttr -s 8 ".tk[16:23]" -type "float3"  0 0 0.081430167 0 0 -0.081430167
+		 0 0 0.081430167 0 0 -0.081430167 0 0 0.081430167 0 0 -0.081430167 0 0 -0.081430167
+		 0 0 0.081430167;
 createNode polyExtrudeFace -n "polyExtrudeFace2";
 	rename -uid "1580C5B9-48E9-81C9-AD72-F98A00E44799";
 	setAttr ".ics" -type "componentList" 1 "f[4:5]";
@@ -1776,15 +2132,9 @@ createNode polyExtrudeFace -n "polyExtrudeFace2";
 createNode polyTweak -n "polyTweak1";
 	rename -uid "982510F4-4305-0580-2D27-48AAE9183E7A";
 	setAttr ".uopa" yes;
-	setAttr -s 9 ".tk";
-	setAttr ".tk[8]" -type "float3" 0.332991 0 -0.046383653 ;
-	setAttr ".tk[9]" -type "float3" 0.332991 0 0.046383653 ;
-	setAttr ".tk[10]" -type "float3" 0.332991 0 -0.046383653 ;
-	setAttr ".tk[11]" -type "float3" 0.332991 0 0.046383653 ;
-	setAttr ".tk[12]" -type "float3" -0.332991 0 -0.046383653 ;
-	setAttr ".tk[13]" -type "float3" -0.332991 0 0.046383653 ;
-	setAttr ".tk[14]" -type "float3" -0.332991 0 0.046383653 ;
-	setAttr ".tk[15]" -type "float3" -0.332991 0 -0.046383653 ;
+	setAttr -s 8 ".tk[8:15]" -type "float3"  0.332991 0 -0.046383653 0.332991
+		 0 0.046383653 0.332991 0 -0.046383653 0.332991 0 0.046383653 -0.332991 0 -0.046383653
+		 -0.332991 0 0.046383653 -0.332991 0 0.046383653 -0.332991 0 -0.046383653;
 createNode polyExtrudeFace -n "polyExtrudeFace1";
 	rename -uid "E5803417-4B85-8637-4F4C-2DB0B9C7BD85";
 	setAttr ".ics" -type "componentList" 1 "f[4:5]";
@@ -1819,7 +2169,7 @@ createNode deleteComponent -n "deleteComponent3";
 createNode polyExtrudeFace -n "polyExtrudeFace7";
 	rename -uid "0753FC69-4340-4BBB-1428-99B99C5E8491";
 	setAttr ".ics" -type "componentList" 1 "f[21]";
-	setAttr ".ix" -type "matrix" 0.40259206269566922 0 -0 0 -0 0.39573895967664374 -0.073966510932998566 0
+	setAttr ".ix" -type "matrix" 0.40259206269566922 0 0 0 0 0.39573895967664374 -0.073966510932998566 0
 		 0 0.073966510932998566 0.39573895967664374 0 -6.2149054188317203 0.45319536371033009 2.0088437438164877 1;
 	setAttr ".ws" yes;
 	setAttr ".pvt" -type "float3" -6.2149053 0.55508983 1.9348772 ;
@@ -1841,7 +2191,7 @@ createNode polyTweak -n "polyTweak7";
 createNode polyExtrudeFace -n "polyExtrudeFace8";
 	rename -uid "AC0569FE-428A-9510-4341-499C202998A6";
 	setAttr ".ics" -type "componentList" 1 "f[20]";
-	setAttr ".ix" -type "matrix" 0.40259206269566922 0 -0 0 -0 0.39573895967664374 -0.073966510932998566 0
+	setAttr ".ix" -type "matrix" 0.40259206269566922 0 0 0 0 0.39573895967664374 -0.073966510932998566 0
 		 0 0.073966510932998566 0.39573895967664374 0 -6.2149054188317203 0.45319536371033009 2.0088437438164877 1;
 	setAttr ".ws" yes;
 	setAttr ".pvt" -type "float3" -6.2149053 0.057456397 2.0828102 ;
@@ -1853,51 +2203,25 @@ createNode polyExtrudeFace -n "polyExtrudeFace8";
 createNode polyTweak -n "polyTweak8";
 	rename -uid "8AD3A4CE-41F1-7A7D-C06D-D0AD8826F6EA";
 	setAttr ".uopa" yes;
-	setAttr -s 41 ".tk";
-	setAttr ".tk[20]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[21]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[22]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[23]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[24]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[25]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[26]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[27]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[28]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[29]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[30]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[31]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[32]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[33]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[34]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[35]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[36]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[37]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[38]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[39]" -type "float3" 0 -0.24837774 0.15634382 ;
-	setAttr ".tk[40]" -type "float3" -0.16330978 -4.671103e-008 3.7914244e-008 ;
-	setAttr ".tk[41]" -type "float3" -0.15531681 0 0.050465476 ;
-	setAttr ".tk[42]" -type "float3" -0.13212042 -4.671103e-008 0.095991097 ;
-	setAttr ".tk[43]" -type "float3" -0.095990978 -4.671103e-008 0.13212045 ;
-	setAttr ".tk[44]" -type "float3" -0.05046552 -4.671103e-008 0.15531686 ;
-	setAttr ".tk[45]" -type "float3" 0 -2.3355513e-008 0.16330978 ;
-	setAttr ".tk[46]" -type "float3" 0.0504652 -4.671103e-008 0.15531686 ;
-	setAttr ".tk[47]" -type "float3" 0.095990829 -4.671103e-008 0.13212045 ;
-	setAttr ".tk[48]" -type "float3" 0.13212009 -4.671103e-008 0.095991097 ;
-	setAttr ".tk[49]" -type "float3" 0.15531665 0 0.050465476 ;
-	setAttr ".tk[50]" -type "float3" 0.16330945 -4.671103e-008 3.7914244e-008 ;
-	setAttr ".tk[51]" -type "float3" 0.15531665 0 -0.050465491 ;
-	setAttr ".tk[52]" -type "float3" 0.13212009 -4.671103e-008 -0.09599103 ;
-	setAttr ".tk[53]" -type "float3" 0.095990829 0 -0.13212045 ;
-	setAttr ".tk[54]" -type "float3" 0.0504652 -2.3355513e-008 -0.15531686 ;
-	setAttr ".tk[55]" -type "float3" 0 2.3355511e-008 -0.1633098 ;
-	setAttr ".tk[56]" -type "float3" -0.05046552 -2.3355513e-008 -0.15531686 ;
-	setAttr ".tk[57]" -type "float3" -0.095990978 0 -0.13212045 ;
-	setAttr ".tk[58]" -type "float3" -0.13212024 -4.671103e-008 -0.09599103 ;
-	setAttr ".tk[59]" -type "float3" -0.15531681 0 -0.050465491 ;
+	setAttr -s 40 ".tk[20:59]" -type "float3"  0 -0.24837774 0.15634382 0
+		 -0.24837774 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774
+		 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382
+		 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774
+		 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382
+		 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774 0.15634382 0 -0.24837774
+		 0.15634382 0 -0.24837774 0.15634382 -0.16330978 -4.671103e-008 3.7914244e-008 -0.15531681
+		 0 0.050465476 -0.13212042 -4.671103e-008 0.095991097 -0.095990978 -4.671103e-008
+		 0.13212045 -0.05046552 -4.671103e-008 0.15531686 0 -2.3355513e-008 0.16330978 0.0504652
+		 -4.671103e-008 0.15531686 0.095990829 -4.671103e-008 0.13212045 0.13212009 -4.671103e-008
+		 0.095991097 0.15531665 0 0.050465476 0.16330945 -4.671103e-008 3.7914244e-008 0.15531665
+		 0 -0.050465491 0.13212009 -4.671103e-008 -0.09599103 0.095990829 0 -0.13212045 0.0504652
+		 -2.3355513e-008 -0.15531686 0 2.3355511e-008 -0.1633098 -0.05046552 -2.3355513e-008
+		 -0.15531686 -0.095990978 0 -0.13212045 -0.13212024 -4.671103e-008 -0.09599103 -0.15531681
+		 0 -0.050465491;
 createNode polyExtrudeFace -n "polyExtrudeFace9";
 	rename -uid "279A257D-4982-99D8-E384-8E8A8D252202";
 	setAttr ".ics" -type "componentList" 1 "f[20]";
-	setAttr ".ix" -type "matrix" 0.40259206269566922 0 -0 0 -0 0.39573895967664374 -0.073966510932998566 0
+	setAttr ".ix" -type "matrix" 0.40259206269566922 0 0 0 0 0.39573895967664374 -0.073966510932998566 0
 		 0 0.073966510932998566 0.39573895967664374 0 -6.2149054188317203 0.45319536371033009 2.0088437438164877 1;
 	setAttr ".ws" yes;
 	setAttr ".pvt" -type "float3" -6.2149048 -0.039203294 2.1008766 ;
@@ -1919,7 +2243,7 @@ createNode polyTweak -n "polyTweak9";
 createNode polyExtrudeFace -n "polyExtrudeFace10";
 	rename -uid "2F5FCB33-4A3A-36AD-ADCB-2384A5730E68";
 	setAttr ".ics" -type "componentList" 1 "f[20]";
-	setAttr ".ix" -type "matrix" 0.40259206269566922 0 -0 0 -0 0.39573895967664374 -0.073966510932998566 0
+	setAttr ".ix" -type "matrix" 0.40259206269566922 0 0 0 0 0.39573895967664374 -0.073966510932998566 0
 		 0 0.073966510932998566 0.39573895967664374 0 -6.2149054188317203 0.45319536371033009 2.0088437438164877 1;
 	setAttr ".ws" yes;
 	setAttr ".pvt" -type "float3" -6.2149043 -0.19894972 2.2471626 ;
@@ -1943,7 +2267,7 @@ createNode polyTweak -n "polyTweak10";
 createNode polyExtrudeFace -n "polyExtrudeFace11";
 	rename -uid "FAC3AF9B-4529-5D2F-014F-F2B08EB82209";
 	setAttr ".ics" -type "componentList" 1 "f[20]";
-	setAttr ".ix" -type "matrix" 0.40259206269566922 0 -0 0 -0 0.39573895967664374 -0.073966510932998566 0
+	setAttr ".ix" -type "matrix" 0.40259206269566922 0 0 0 0 0.39573895967664374 -0.073966510932998566 0
 		 0 0.073966510932998566 0.39573895967664374 0 -6.2149054188317203 0.45319536371033009 2.0088437438164877 1;
 	setAttr ".ws" yes;
 	setAttr ".pvt" -type "float3" -6.2149043 -0.2627033 2.482239 ;
@@ -1965,7 +2289,7 @@ createNode polyTweak -n "polyTweak11";
 createNode polyExtrudeFace -n "polyExtrudeFace12";
 	rename -uid "7F3BAECF-4AC5-0841-A43B-748D7D2D8864";
 	setAttr ".ics" -type "componentList" 1 "f[20]";
-	setAttr ".ix" -type "matrix" 0.40259206269566922 0 -0 0 -0 0.39573895967664374 -0.073966510932998566 0
+	setAttr ".ix" -type "matrix" 0.40259206269566922 0 0 0 0 0.39573895967664374 -0.073966510932998566 0
 		 0 0.073966510932998566 0.39573895967664374 0 -6.2149054188317203 0.45319536371033009 2.0088437438164877 1;
 	setAttr ".ws" yes;
 	setAttr ".t" -type "double3" 0 -0.031388212896735879 0.10193279771393726 ;
@@ -1987,19 +2311,9 @@ createNode polyTweak -n "polyTweak12";
 		 0.12210879 3.6325604e-014 0.2035398 0.12210879 -0.019750966 0.20091613 0.12210879
 		 -0.03756969 0.19330217 0.12210879 -0.051710121 0.18144262 0.12210879 -0.060788684
 		 0.16649915 0.12210879 -0.063917264 0.14993402 0.12210879;
-createNode reference -n "CannonRN";
-	rename -uid "82D2EFA0-447C-800A-F8C7-4D9A86F26011";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"CannonRN"
-		"CannonRN" 1
-		2 "|Cannon:pPlane1" "translate" " -type \"double3\" 0 0 0";
-lockNode -l 1 ;
-createNode reference -n "sharedReferenceNode";
-	rename -uid "46A0AF3E-4E33-D56D-31C7-FE8C1DB32DF4";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"sharedReferenceNode";
 createNode blinn -n "blinn1";
 	rename -uid "853B8CE3-4469-5342-2C0C-DF852A28F263";
+	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "blinn1SG";
 	rename -uid "B6A0E635-40A8-1238-72FC-45944888F5AA";
 	setAttr ".ihi" 0;
@@ -2028,7 +2342,7 @@ createNode polyMapCut -n "polyMapCut1";
 createNode polyTweakUV -n "polyTweakUV1";
 	rename -uid "D65F8B09-42E4-144A-5B9A-88B51821A805";
 	setAttr ".uopa" yes;
-	setAttr -s 320 ".uvtk";
+	setAttr -s 319 ".uvtk";
 	setAttr ".uvtk[1]" -type "float2" 0.029217422 0.016597629 ;
 	setAttr ".uvtk[2]" -type "float2" 0.031208098 -0.058148772 ;
 	setAttr ".uvtk[4]" -type "float2" 0.037979066 0.053110287 ;
@@ -2359,7 +2673,7 @@ createNode polyMapSew -n "polyMapSew1";
 createNode polyTweakUV -n "polyTweakUV2";
 	rename -uid "EB547800-4656-C976-E4AF-6B9D4B784E28";
 	setAttr ".uopa" yes;
-	setAttr -s 185 ".uvtk";
+	setAttr -s 184 ".uvtk";
 	setAttr ".uvtk[79]" -type "float2" 0 0.52834678 ;
 	setAttr ".uvtk[80]" -type "float2" 0 0.52834684 ;
 	setAttr ".uvtk[81]" -type "float2" 0 0.5283469 ;
@@ -2575,7 +2889,7 @@ createNode polyMapSew -n "polyMapSew8";
 createNode polyTweakUV -n "polyTweakUV3";
 	rename -uid "0595DBCE-4DE6-1854-5AFC-DA998EB2BCE7";
 	setAttr ".uopa" yes;
-	setAttr -s 327 ".uvtk";
+	setAttr -s 326 ".uvtk";
 	setAttr ".uvtk[1]" -type "float2" 0.05637145 -0.057495505 ;
 	setAttr ".uvtk[2]" -type "float2" 0.096794367 -0.0087496042 ;
 	setAttr ".uvtk[4]" -type "float2" 0.12184602 -0.13274431 ;
@@ -2909,7 +3223,7 @@ createNode polyMapCut -n "polyMapCut3";
 createNode polyTweakUV -n "polyTweakUV4";
 	rename -uid "C3D21BF7-4C7F-3327-E542-748AF78F5A7A";
 	setAttr ".uopa" yes;
-	setAttr -s 352 ".uvtk";
+	setAttr -s 280 ".uvtk";
 	setAttr ".uvtk[0]" -type "float2" 0.16028115 0.15842679 ;
 	setAttr ".uvtk[1]" -type "float2" -0.1186797 0.19049671 ;
 	setAttr ".uvtk[2]" -type "float2" -0.15193817 -0.036754876 ;
@@ -3217,7 +3531,7 @@ createNode polyMapSew -n "polyMapSew14";
 createNode polyTweakUV -n "polyTweakUV5";
 	rename -uid "B305FD93-4F61-EC5E-C239-4B97AC83F4CB";
 	setAttr ".uopa" yes;
-	setAttr -s 173 ".uvtk";
+	setAttr -s 172 ".uvtk";
 	setAttr ".uvtk[9]" -type "float2" 2.6228471 0 ;
 	setAttr ".uvtk[10]" -type "float2" 2.6228471 0 ;
 	setAttr ".uvtk[11]" -type "float2" 2.6228471 0 ;
@@ -4262,7 +4576,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 685\n            -height 699\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 886\n            -height 741\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n"
 		+ "            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
 		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n"
@@ -4277,21 +4591,2966 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
 		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
-		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 685\\n    -height 699\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 685\\n    -height 699\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n"
+		+ "                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 886\\n    -height 741\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 886\\n    -height 741\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "363F5602-4EC2-A613-6B40-81A495AF1BDE";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "333C501E-4785-BCF5-8021-5FB6F1482E48";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -73.809520876596963 -323.80951094248991 ;
+	setAttr ".tgi[0].vh" -type "double2" 72.619044733426037 338.09522466054096 ;
+createNode reference -n "CannonRN";
+	rename -uid "7B1DB6D6-4859-2E14-376F-BE9BA764B0E3";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"CannonRN"
+		"CannonRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "sharedReferenceNode";
+	rename -uid "51566A82-4869-86BE-EFB9-27ABC11800EF";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
+createNode reference -n "CrabRN";
+	rename -uid "ACC5A31B-4451-9D8B-387F-B09837B90CDA";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"CrabRN"
+		"CrabRN" 0
+		"CrabRN" 3
+		2 "|Crab:Crab" "translate" " -type \"double3\" -50.281666321917868 21.648254234931922 0"
+		
+		2 "|Crab:Crab" "rotate" " -type \"double3\" 0 0 -11.173829068725095"
+		2 "|Crab:Crab" "scale" " -type \"double3\" 1.945024155382626 1.945024155382626 1.945024155382626";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "anchor_FinalRN";
+	rename -uid "91E633B1-4AD5-8CE3-7E71-318DB67F73CE";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"anchor_FinalRN"
+		"anchor_FinalRN" 0
+		"anchor_FinalRN" 3
+		2 "|anchor_Final:group1|anchor_Final:pCube2" "translate" " -type \"double3\" -14.218281844634639 -6.030932186407874 26.810980631730704"
+		
+		2 "|anchor_Final:group1|anchor_Final:pCube2" "rotate" " -type \"double3\" -22.954065061226039 0 0"
+		
+		2 "|anchor_Final:group1|anchor_Final:pCube2" "scale" " -type \"double3\" 11.508985721595181 11.508985721595181 11.508985721595181";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode RenderMan -s -n "renderManRISGlobals";
+	rename -uid "CF60B8C2-4786-6BEF-EAE6-0484D73741EC";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupJob" -ln "rman__toropt___renderDataCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___shaderCleanupJob" -ln "rman__toropt___shaderCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___textureCleanupJob" -ln "rman__toropt___textureCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribCleanupJob" -ln "rman__toropt___ribCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribFlatten" -ln "rman__toropt___ribFlatten" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupFrame" -ln "rman__toropt___renderDataCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___textureCleanupFrame" -ln "rman__toropt___textureCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribCleanupFrame" -ln "rman__toropt___ribCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___primaryCamera" -ln "rman__toropt___primaryCamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___enableRenderLayers" -ln "rman__toropt___enableRenderLayers" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___renderLayer" -ln "rman__toropt___renderLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___motionBlurType" -ln "rman__toropt___motionBlurType" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___shutterAngle" -ln "rman__toropt___shutterAngle" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__toropt___shutterTiming" -ln "rman__toropt___shutterTiming" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___cacheCrew" -ln "rman__toropt___cacheCrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___renumber" -ln "rman__toropt___renumber" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renumberStart" -ln "rman__toropt___renumberStart" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renumberBy" -ln "rman__toropt___renumberBy" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___lazyRibGen" -ln "rman__toropt___lazyRibGen" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___lazyRender" -ln "rman__toropt___lazyRender" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___bakeMode" -ln "rman__toropt___bakeMode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___furChunkSize" -ln "rman__toropt___furChunkSize" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableRifs" -ln "rman__torattr___enableRifs" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___nativeShadingSupport" -ln "rman__toropt___nativeShadingSupport" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionSamples" -ln "rman__torattr___motionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___referenceFrame" -ln "rman__torattr___referenceFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution" -ln "rman__torattr___mapResolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution0" -ln "rman__torattr___mapResolution0" 
+		-dv -1 -at "long" -p "rman__torattr___mapResolution";
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution1" -ln "rman__torattr___mapResolution1" 
+		-dv -1 -at "long" -p "rman__torattr___mapResolution";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___cameraBlur" -ln "rman__torattr___cameraBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___frontPlane" -ln "rman__torattr___frontPlane" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___backPlane" -ln "rman__torattr___backPlane" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___crop" -ln "rman__torattr___crop" -dv 
+		-1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passExtFormat" -ln "rman__torattr___passExtFormat" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultDisplacementShader" -ln "rman__torattr___defaultDisplacementShader" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultAtmosphereShader" -ln "rman__torattr___defaultAtmosphereShader" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultInteriorShader" -ln "rman__torattr___defaultInteriorShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___preFrameScript" -ln "rman__toropt___preFrameScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___postFrameScript" -ln "rman__toropt___postFrameScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preRenderScript" -ln "rman__torattr___preRenderScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postRenderScript" -ln "rman__torattr___postRenderScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultRiOptionsScript" -ln "rman__torattr___defaultRiOptionsScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultRiAttributesScript" -ln "rman__torattr___defaultRiAttributesScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___renderBeginScript" -ln "rman__torattr___renderBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___transformBeginScript" -ln "rman__torattr___transformBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___transformEndScript" -ln "rman__torattr___transformEndScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postTransformScript" -ln "rman__torattr___postTransformScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preShapeScript" -ln "rman__torattr___preShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postShapeScript" -ln "rman__torattr___postShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cacheShapeScript" -ln "rman__torattr___cacheShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeChannels" -ln "rman__torattr___bakeChannels" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeCrew" -ln "rman__torattr___bakeCrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeOutputFile" -ln "rman__torattr___bakeOutputFile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___customShadingGroup" -ln "rman__torattr___customShadingGroup" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___shaderBindingStrength" -ln "rman__torattr___shaderBindingStrength" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableObjectInstancing" -ln "rman__torattr___enableObjectInstancing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___impliedSSBakeMode" -ln "rman__torattr___impliedSSBakeMode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___JOBSTYLE" -ln "rman__toropt___JOBSTYLE" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___deformationBlurStyle" -ln "rman__torattr___deformationBlurStyle" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___deformationBlurScale" -ln "rman__torattr___deformationBlurScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__torattr___enableMfcProcPrim" -ln "rman__torattr___enableMfcProcPrim" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___linearizeColors" -ln "rman__torattr___linearizeColors" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___referenceCamera" -ln "rman__torattr___referenceCamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___enableRIS" -ln "rman__toropt___enableRIS" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___denoise" -ln "rman__torattr___denoise" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___denoiseFilter" -ln "rman__torattr___denoiseFilter" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputShadowAOV" -ln "rman__torattr___outputShadowAOV" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableImagePlaneFilter" -ln "rman__torattr___enableImagePlaneFilter" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__trace_decimationrate" -ln "rman__riopt__trace_decimationrate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_threads" -ln "rman__riopt__limits_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening" -ln "rman__riopt__Camera_shutteropening" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening0" -ln "rman__riopt__Camera_shutteropening0" 
+		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening1" -ln "rman__riopt__Camera_shutteropening1" 
+		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__hair_minwidth" -ln "rman__riopt__hair_minwidth" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__rib_compression" -ln "rman__riopt__rib_compression" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__rib_format" -ln "rman__riopt__rib_format" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__rib_precision" -ln "rman__riopt__rib_precision" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__user_iesIgnoreWatts" -ln "rman__riopt__user_iesIgnoreWatts" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__statistics_level" -ln "rman__riopt__statistics_level" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__statistics_filename" -ln "rman__riopt__statistics_filename" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__statistics_xmlfilename" -ln "rman__riopt__statistics_xmlfilename" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Projection_name" -ln "rman__riopt__Projection_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Projection2_name" -ln "rman__riopt__Projection2_name" 
+		-dt "string";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_zthreshold" -ln "rman__riopt__limits_zthreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdr" -ln "rman__riopt__limits_zthresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdg" -ln "rman__riopt__limits_zthresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdb" -ln "rman__riopt__limits_zthresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_othreshold" -ln "rman__riopt__limits_othreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdr" -ln "rman__riopt__limits_othresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdg" -ln "rman__riopt__limits_othresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdb" -ln "rman__riopt__limits_othresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_texturememory" -ln "rman__riopt__limits_texturememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_geocachememory" -ln "rman__riopt__limits_geocachememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_proceduralmemory" -ln "rman__riopt__limits_proceduralmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowtiles" -ln "rman__riopt__limits_deepshadowtiles" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowmemory" -ln "rman__riopt__limits_deepshadowmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_brickmemory" -ln "rman__riopt__limits_brickmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__user_sceneUnits" -ln "rman__riopt__user_sceneUnits" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_diffuse2" -ln "rman__riopt__lpe_diffuse2" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_diffuse3" -ln "rman__riopt__lpe_diffuse3" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular2" -ln "rman__riopt__lpe_specular2" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular3" -ln "rman__riopt__lpe_specular3" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular4" -ln "rman__riopt__lpe_specular4" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular5" -ln "rman__riopt__lpe_specular5" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular6" -ln "rman__riopt__lpe_specular6" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular7" -ln "rman__riopt__lpe_specular7" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular8" -ln "rman__riopt__lpe_specular8" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minextrasamples" -ln "rman__riopt__Hider_minextrasamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_opacitycachememory" -ln "rman__riopt__limits_opacitycachememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_samplemotion" -ln "rman__riattr__trace_samplemotion" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__dice_referencecamera" -ln "rman__riattr__dice_referencecamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__dice_minlength" -ln "rman__riattr__dice_minlength" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__procedural_reentrant" -ln "rman__riattr__procedural_reentrant" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__dice_micropolygonlength" -ln "rman__riattr__dice_micropolygonlength" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__dice_watertight" -ln "rman__riattr__dice_watertight" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_autobias" -ln "rman__riattr__trace_autobias" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_bias" -ln "rman__riattr__trace_bias" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riattr__displacementbound_coordinatesystem" 
+		-ln "rman__riattr__displacementbound_coordinatesystem" -dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__displacementbound_sphere" -ln "rman__riattr__displacementbound_sphere" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_fov" -ln "rman__riopt__Projection_fov" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_hsweep" -ln "rman__riopt__Projection_hsweep" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_vsweep" -ln "rman__riopt__Projection_vsweep" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_minor" -ln "rman__riopt__Projection_minor" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_adaptall" -ln "rman__riopt__Hider_adaptall" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_incremental" -ln "rman__riopt__Hider_incremental" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_pixelfiltermode" -ln "rman__riopt__Hider_pixelfiltermode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_imagePlaneSubset" -ln "rman__riopt__Integrator_imagePlaneSubset" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_distribution" -ln "rman__riopt__Integrator_distribution" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_distance" -ln "rman__riopt__Integrator_distance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_gamma" -ln "rman__riopt__Integrator_gamma" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_useAlbedo" -ln "rman__riopt__Integrator_useAlbedo" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframe" -ln "rman__riopt__Integrator_wireframe" 
+		-dv -1 -at "long";
+	addAttr -ci true -uac -k true -sn "rman__riopt__Integrator_wireframeColor" -ln "rman__riopt__Integrator_wireframeColor" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorr" -ln "rman__riopt__Integrator_wireframeColorR" 
+		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorg" -ln "rman__riopt__Integrator_wireframeColorG" 
+		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorb" -ln "rman__riopt__Integrator_wireframeColorB" 
+		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeOpacity" -ln "rman__riopt__Integrator_wireframeOpacity" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeWidth" -ln "rman__riopt__Integrator_wireframeWidth" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_style" -ln "rman__riopt__Integrator_style" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_normalCheck" -ln "rman__riopt__Integrator_normalCheck" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_matCap" -ln "rman__riopt__Integrator_matCap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__EnvLight" -ln "rman__EnvLight" -dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".rman__torattr___class" -type "string" "RISJob";
+	setAttr ".rman__torattr___task" -type "string" "job";
+	setAttr -k on ".rman__toropt___renderDataCleanupJob" 0;
+	setAttr -k on ".rman__toropt___shaderCleanupJob" 0;
+	setAttr -k on ".rman__toropt___textureCleanupJob" 0;
+	setAttr -k on ".rman__toropt___ribCleanupJob" 0;
+	setAttr -k on ".rman__toropt___ribFlatten" 0;
+	setAttr -k on ".rman__toropt___renderDataCleanupFrame" 0;
+	setAttr -k on ".rman__toropt___textureCleanupFrame" 0;
+	setAttr -k on ".rman__toropt___ribCleanupFrame" 0;
+	setAttr ".rman__toropt___primaryCamera" -type "string" "";
+	setAttr -k on ".rman__toropt___enableRenderLayers" 0;
+	setAttr ".rman__toropt___renderLayer" -type "string" "";
+	setAttr ".rman__toropt___motionBlurType" -type "string" "frame";
+	setAttr -k on ".rman__toropt___shutterAngle" 180;
+	setAttr ".rman__toropt___shutterTiming" -type "string" "frameOpen";
+	setAttr ".rman__toropt___cacheCrew" -type "string" "";
+	setAttr -k on ".rman__toropt___renumber" 0;
+	setAttr -k on ".rman__toropt___renumberStart" 1;
+	setAttr -k on ".rman__toropt___renumberBy" 1;
+	setAttr -k on ".rman__toropt___lazyRibGen" 0;
+	setAttr -k on ".rman__toropt___lazyRender" 0;
+	setAttr -k on ".rman__toropt___bakeMode" 0;
+	setAttr -k on ".rman__toropt___furChunkSize" 10000;
+	setAttr -k on ".rman__torattr___enableRifs" 1;
+	setAttr -k on ".rman__toropt___nativeShadingSupport" 0;
+	setAttr -k on ".rman__torattr___motionSamples" 2;
+	setAttr -k on ".rman__torattr___referenceFrame" 0;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___mapResolution" -type "long2" 0 0 ;
+	setAttr -k on ".rman__torattr___depthOfField" 0;
+	setAttr -k on ".rman__torattr___cameraBlur" 0;
+	setAttr -k on ".rman__torattr___frontPlane" 0;
+	setAttr -k on ".rman__torattr___backPlane" 0;
+	setAttr ".rman__torattr___passCommand" -type "string" "";
+	setAttr -k on ".rman__torattr___crop" 0;
+	setAttr ".rman__torattr___passExtFormat" -type "string" "";
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__torattr___previewPass" 0;
+	setAttr ".rman__torattr___defaultDisplacementShader" -type "string" "";
+	setAttr ".rman__torattr___defaultAtmosphereShader" -type "string" "";
+	setAttr ".rman__torattr___defaultInteriorShader" -type "string" "";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 1;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 1;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 1;
+	setAttr ".rman__toropt___preFrameScript" -type "string" "";
+	setAttr ".rman__toropt___postFrameScript" -type "string" "";
+	setAttr ".rman__torattr___preRenderScript" -type "string" "";
+	setAttr ".rman__torattr___postRenderScript" -type "string" "";
+	setAttr ".rman__torattr___defaultRiOptionsScript" -type "string" "";
+	setAttr ".rman__torattr___defaultRiAttributesScript" -type "string" "";
+	setAttr ".rman__torattr___renderBeginScript" -type "string" "rmanTimeStampScript";
+	setAttr ".rman__torattr___transformBeginScript" -type "string" "";
+	setAttr ".rman__torattr___transformEndScript" -type "string" "";
+	setAttr ".rman__torattr___postTransformScript" -type "string" "";
+	setAttr ".rman__torattr___preShapeScript" -type "string" "";
+	setAttr ".rman__torattr___postShapeScript" -type "string" "";
+	setAttr ".rman__torattr___cacheShapeScript" -type "string" "";
+	setAttr ".rman__torattr___bakeChannels" -type "string" "";
+	setAttr ".rman__torattr___bakeCrew" -type "string" "";
+	setAttr ".rman__torattr___bakeOutputFile" -type "string" "";
+	setAttr ".rman__torattr___customShadingGroup" -type "string" "";
+	setAttr -k on ".rman__torattr___shaderBindingStrength" 1;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___enableObjectInstancing" 1;
+	setAttr ".rman__torattr___impliedSSBakeMode" -type "string" "SSDiffuse";
+	setAttr ".rman__toropt___JOBSTYLE" -type "string" "";
+	setAttr ".rman__torattr___deformationBlurStyle" -type "string" "none";
+	setAttr -k on ".rman__torattr___deformationBlurScale" 1;
+	setAttr -k on ".rman__torattr___enableMfcProcPrim" 0;
+	setAttr -k on ".rman__torattr___linearizeColors" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 1;
+	setAttr ".rman__torattr___referenceCamera" -type "string" "";
+	setAttr -k on ".rman__toropt___enableRIS" 1;
+	setAttr -k on ".rman__torattr___denoise" 0;
+	setAttr ".rman__torattr___denoiseFilter" -type "string" "default.filter.json";
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "PxrDiffuse";
+	setAttr -k on ".rman__torattr___outputShadowAOV" 0;
+	setAttr -k on ".rman__torattr___enableImagePlaneFilter" 1;
+	setAttr -k on ".rman__riopt__trace_maxdepth" 10;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt__trace_decimationrate" 1;
+	setAttr -k on ".rman__riopt__limits_threads" 0;
+	setAttr -k on ".rman__riopt__Camera_shutteropening" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 960 540 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr -k on ".rman__riopt__hair_minwidth" 0.5;
+	setAttr ".rman__riopt__rib_compression" -type "string" "none";
+	setAttr ".rman__riopt__rib_format" -type "string" "binary";
+	setAttr -k on ".rman__riopt__rib_precision" 6;
+	setAttr -k on ".rman__riopt__user_iesIgnoreWatts" 1;
+	setAttr -k on ".rman__riopt__statistics_level" 1;
+	setAttr ".rman__riopt__statistics_filename" -type "string" "stdout";
+	setAttr ".rman__riopt__statistics_xmlfilename" -type "string" "[AssetRef -cls rmanstat]";
+	setAttr ".rman__riopt__Projection_name" -type "string" "";
+	setAttr ".rman__riopt__Projection2_name" -type "string" "";
+	setAttr -k on ".rman__riopt__limits_zthreshold" -type "float3" 0.99599999 0.99599999 
+		0.99599999 ;
+	setAttr -k on ".rman__riopt__limits_othreshold" -type "float3" 0.99599999 0.99599999 
+		0.99599999 ;
+	setAttr -k on ".rman__riopt__limits_texturememory" 4194304;
+	setAttr -k on ".rman__riopt__limits_geocachememory" 2097152;
+	setAttr -k on ".rman__riopt__limits_proceduralmemory" 0;
+	setAttr -k on ".rman__riopt__limits_deepshadowtiles" 1000;
+	setAttr -k on ".rman__riopt__limits_deepshadowmemory" 102400;
+	setAttr -k on ".rman__riopt__limits_brickmemory" 10240;
+	setAttr -k on ".rman__riopt__user_sceneUnits" 1;
+	setAttr ".rman__riopt__lpe_diffuse2" -type "string" "Diffuse";
+	setAttr ".rman__riopt__lpe_diffuse3" -type "string" "Subsurface";
+	setAttr ".rman__riopt__lpe_specular2" -type "string" "Specular";
+	setAttr ".rman__riopt__lpe_specular3" -type "string" "RoughSpecular";
+	setAttr ".rman__riopt__lpe_specular4" -type "string" "Clearcoat";
+	setAttr ".rman__riopt__lpe_specular5" -type "string" "Iridescence";
+	setAttr ".rman__riopt__lpe_specular6" -type "string" "Fuzz";
+	setAttr ".rman__riopt__lpe_specular7" -type "string" "SingleScatter";
+	setAttr ".rman__riopt__lpe_specular8" -type "string" "Glass";
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_minextrasamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 128;
+	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
+	setAttr -k on ".rman__riopt__limits_opacitycachememory" 4194304;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 4;
+	setAttr -k on ".rman__riattr__trace_samplemotion" 1;
+	setAttr ".rman__riattr__dice_referencecamera" -type "string" "worldcamera";
+	setAttr -k on ".rman__riattr__procedural_reentrant" 1;
+	setAttr -k on ".rman__riattr__dice_micropolygonlength" 1;
+	setAttr -k on ".rman__riattr__dice_watertight" 0;
+	setAttr -k on ".rman__riattr__trace_autobias" 1;
+	setAttr -k on ".rman__riattr__trace_bias" 0.0010000000474974513;
+	setAttr ".rman__riattr__displacementbound_coordinatesystem" -type "string" "shader";
+	setAttr -k on ".rman__riattr__displacementbound_sphere" 0;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr -k on ".rman__riopt__Projection_fov" 0;
+	setAttr -k on ".rman__riopt__Projection_hsweep" 360;
+	setAttr -k on ".rman__riopt__Projection_vsweep" 180;
+	setAttr -k on ".rman__riopt__Projection_minor" 0.25;
+	setAttr -k on ".rman__riopt__Hider_adaptall" 0;
+	setAttr -k on ".rman__riopt__Hider_incremental" 1;
+	setAttr ".rman__riopt__Hider_pixelfiltermode" -type "string" "weighted";
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 2;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 2;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 2;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr ".rman__riopt__Integrator_imagePlaneSubset" -type "string" "rman__imageplane";
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr ".rman__riopt__Integrator_distribution" -type "string" "cosine";
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr -k on ".rman__riopt__Integrator_distance" 10;
+	setAttr -k on ".rman__riopt__Integrator_gamma" 1;
+	setAttr -k on ".rman__riopt__Integrator_useAlbedo" 0;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+	setAttr -k on ".rman__riopt__Integrator_wireframe" 1;
+	setAttr -k on ".rman__riopt__Integrator_wireframeColor" -type "float3" 0 0 0 ;
+	setAttr -k on ".rman__riopt__Integrator_wireframeOpacity" 0.5;
+	setAttr -k on ".rman__riopt__Integrator_wireframeWidth" 1;
+	setAttr ".rman__riopt__Integrator_style" -type "string" "shaded";
+	setAttr -k on ".rman__riopt__Integrator_normalCheck" 0;
+	setAttr ".rman__riopt__Integrator_matCap" -type "string" "";
+	setAttr ".rman__EnvLight" -type "string" "";
+	setAttr -s 3 ".p";
+	setAttr ".nt" -type "string" "settings:job";
+createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
+	rename -uid "69B1A746-4037-3811-3E11-38868F1788F1";
+lockNode -l 1 ;
+createNode PxrCamera -s -n "PxrCamera";
+	rename -uid "611AD430-4ED1-F8CD-B7A7-13A35E128D4E";
+lockNode -l 1 ;
+createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
+	rename -uid "DFE7ECE8-4856-B9D9-63D1-1695401CE1E8";
+lockNode -l 1 ;
+createNode PxrDefault -s -n "PxrDefault";
+	rename -uid "5D0D973B-4576-34BD-DA19-0A914714DE43";
+lockNode -l 1 ;
+createNode PxrDirectLighting -s -n "PxrDirectLighting";
+	rename -uid "9B10C7EE-4120-9ABE-0979-98A6EA273897";
+lockNode -l 1 ;
+createNode PxrOcclusion -s -n "PxrOcclusion";
+	rename -uid "6F147858-4F7D-A365-5B6C-C1ABB51D9247";
+lockNode -l 1 ;
+createNode PxrPathTracer -s -n "PxrPathTracer";
+	rename -uid "8621ED01-444D-8B03-1E02-7CBC1345DFE4";
+lockNode -l 1 ;
+createNode PxrVCM -s -n "PxrVCM";
+	rename -uid "E2E79CC8-4D9F-AF89-0A03-0494CA68D5E8";
+lockNode -l 1 ;
+createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
+	rename -uid "E05167F9-487C-0BDC-2371-308A646CABF0";
+lockNode -l 1 ;
+createNode PxrVisualizer -s -n "PxrVisualizer";
+	rename -uid "553BD76F-45E2-5B19-CF6F-FAB3A50ADA4B";
+lockNode -l 1 ;
+createNode RenderMan -s -n "rmanFinalGlobals";
+	rename -uid "52D3565A-4E62-CB4B-7FE4-E99B790064A4";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Final";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".nt" -type "string" "pass:render";
+createNode RenderMan -s -n "rmanFinalOutputGlobals0";
+	rename -uid "9573B193-46E0-0795-D5E4-A9999D15EE79";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
+createNode RenderMan -s -n "rmanRerenderRISGlobals";
+	rename -uid "717ED2C8-4AC5-36AC-D27D-F7ACF7431B17";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 64;
+	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.05000000074505806;
+	setAttr ".nt" -type "string" "pass:render";
+createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
+	rename -uid "BAAEF9C7-4D00-BDAF-FB43-C9BDD87BE8EE";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
+createNode RenderMan -s -n "rmanBakeGlobals";
+	rename -uid "9F852DE6-4AF5-520A-87DB-F395FBA9E2E8";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Bake";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__riopt__Hider_name" -type "string" "bake";
+	setAttr ".nt" -type "string" "pass:render";
+createNode reference -n "Fish_Angler_01RN";
+	rename -uid "51290585-420A-4E1F-2B8F-29B8DB7AE560";
+	setAttr -s 9 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Fish_Angler_01RN"
+		"Fish_Angler_01RN" 0
+		"Fish_Angler_01RN" 47
+		0 "|Fish_Angler_01:pPyramid6" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid7" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid8" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid9" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid10" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid11" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid12" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid13" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid14" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid15" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid16" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid17" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid18" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid19" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid20" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid21" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid22" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid23" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid24" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid25" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid26" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid27" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid28" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pCube3" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid29" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramid30" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:pPyramidShape30" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197" 
+		"-s -r "
+		0 "|Fish_Angler_01:pPyramid31" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01:group1" "|AnglerFish" "-s -r "
+		0 "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197" 
+		"|AnglerFish|Fish_Angler_01:pPyramid30" "-s -r "
+		2 "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30" 
+		"intermediateObject" " 1"
+		2 "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30" 
+		"instObjGroups.objectGroups" " -s 2"
+		2 "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|AnglerFish|Fish_Angler_01:group1|Fish_Angler_01:pPyramid32" "translate" 
+		" -type \"double3\" 0.50620249474363466 3.8906268080579576 8.597627727728355"
+		2 "|AnglerFish|Fish_Angler_01:group1|Fish_Angler_01:pPyramid32" "rotate" 
+		" -type \"double3\" 24.60685363860518 0 0"
+		2 "|AnglerFish|Fish_Angler_01:group1|Fish_Angler_01:pPyramid32" "scale" " -type \"double3\" 1.3291003561132555 1.3291003561132555 1.3291003561132555"
+		
+		3 "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Fish_Angler_01:polyTweakUV56.output" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.inMesh" 
+		""
+		5 4 "Fish_Angler_01RN" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.inMesh" 
+		"Fish_Angler_01RN.placeHolderList[1]" ""
+		5 3 "Fish_Angler_01RN" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.worldMatrix" 
+		"Fish_Angler_01RN.placeHolderList[2]" ""
+		5 3 "Fish_Angler_01RN" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.instObjGroups.objectGroups[0]" 
+		"Fish_Angler_01RN.placeHolderList[3]" ""
+		5 4 "Fish_Angler_01RN" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.instObjGroups.objectGroups[0].objectGroupId" 
+		"Fish_Angler_01RN.placeHolderList[4]" ""
+		5 4 "Fish_Angler_01RN" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.instObjGroups.objectGroups[0].objectGrpColor" 
+		"Fish_Angler_01RN.placeHolderList[5]" ""
+		5 3 "Fish_Angler_01RN" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.outMesh" 
+		"Fish_Angler_01RN.placeHolderList[6]" ""
+		5 3 "Fish_Angler_01RN" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.compInstObjGroups.compObjectGroups[0]" 
+		"Fish_Angler_01RN.placeHolderList[7]" ""
+		5 4 "Fish_Angler_01RN" "|Fish_Angler_01RNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform197|Fish_Angler_01:pPyramidShape30.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"Fish_Angler_01RN.placeHolderList[8]" ""
+		5 3 "Fish_Angler_01RN" "Fish_Angler_01:polyTweakUV56.output" "Fish_Angler_01RN.placeHolderList[9]" 
+		"Fish_Angler_01:pPyramidShape30.i";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN";
+	rename -uid "69C987A0-4C15-4928-CC2D-D7A7C60A1F28";
+	setAttr -s 380 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
+	setAttr ".phl[89]" 0;
+	setAttr ".phl[90]" 0;
+	setAttr ".phl[91]" 0;
+	setAttr ".phl[92]" 0;
+	setAttr ".phl[93]" 0;
+	setAttr ".phl[94]" 0;
+	setAttr ".phl[95]" 0;
+	setAttr ".phl[96]" 0;
+	setAttr ".phl[97]" 0;
+	setAttr ".phl[98]" 0;
+	setAttr ".phl[99]" 0;
+	setAttr ".phl[100]" 0;
+	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
+	setAttr ".phl[108]" 0;
+	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
+	setAttr ".phl[118]" 0;
+	setAttr ".phl[119]" 0;
+	setAttr ".phl[120]" 0;
+	setAttr ".phl[121]" 0;
+	setAttr ".phl[122]" 0;
+	setAttr ".phl[123]" 0;
+	setAttr ".phl[124]" 0;
+	setAttr ".phl[125]" 0;
+	setAttr ".phl[126]" 0;
+	setAttr ".phl[127]" 0;
+	setAttr ".phl[128]" 0;
+	setAttr ".phl[129]" 0;
+	setAttr ".phl[130]" 0;
+	setAttr ".phl[131]" 0;
+	setAttr ".phl[132]" 0;
+	setAttr ".phl[133]" 0;
+	setAttr ".phl[134]" 0;
+	setAttr ".phl[135]" 0;
+	setAttr ".phl[136]" 0;
+	setAttr ".phl[137]" 0;
+	setAttr ".phl[138]" 0;
+	setAttr ".phl[139]" 0;
+	setAttr ".phl[140]" 0;
+	setAttr ".phl[141]" 0;
+	setAttr ".phl[142]" 0;
+	setAttr ".phl[143]" 0;
+	setAttr ".phl[144]" 0;
+	setAttr ".phl[145]" 0;
+	setAttr ".phl[146]" 0;
+	setAttr ".phl[147]" 0;
+	setAttr ".phl[148]" 0;
+	setAttr ".phl[149]" 0;
+	setAttr ".phl[150]" 0;
+	setAttr ".phl[151]" 0;
+	setAttr ".phl[152]" 0;
+	setAttr ".phl[153]" 0;
+	setAttr ".phl[154]" 0;
+	setAttr ".phl[155]" 0;
+	setAttr ".phl[156]" 0;
+	setAttr ".phl[157]" 0;
+	setAttr ".phl[158]" 0;
+	setAttr ".phl[159]" 0;
+	setAttr ".phl[160]" 0;
+	setAttr ".phl[161]" 0;
+	setAttr ".phl[162]" 0;
+	setAttr ".phl[163]" 0;
+	setAttr ".phl[164]" 0;
+	setAttr ".phl[165]" 0;
+	setAttr ".phl[166]" 0;
+	setAttr ".phl[167]" 0;
+	setAttr ".phl[168]" 0;
+	setAttr ".phl[169]" 0;
+	setAttr ".phl[170]" 0;
+	setAttr ".phl[171]" 0;
+	setAttr ".phl[172]" 0;
+	setAttr ".phl[173]" 0;
+	setAttr ".phl[174]" 0;
+	setAttr ".phl[175]" 0;
+	setAttr ".phl[176]" 0;
+	setAttr ".phl[177]" 0;
+	setAttr ".phl[178]" 0;
+	setAttr ".phl[179]" 0;
+	setAttr ".phl[180]" 0;
+	setAttr ".phl[181]" 0;
+	setAttr ".phl[182]" 0;
+	setAttr ".phl[183]" 0;
+	setAttr ".phl[184]" 0;
+	setAttr ".phl[185]" 0;
+	setAttr ".phl[186]" 0;
+	setAttr ".phl[187]" 0;
+	setAttr ".phl[188]" 0;
+	setAttr ".phl[189]" 0;
+	setAttr ".phl[190]" 0;
+	setAttr ".phl[191]" 0;
+	setAttr ".phl[192]" 0;
+	setAttr ".phl[193]" 0;
+	setAttr ".phl[194]" 0;
+	setAttr ".phl[195]" 0;
+	setAttr ".phl[196]" 0;
+	setAttr ".phl[197]" 0;
+	setAttr ".phl[198]" 0;
+	setAttr ".phl[199]" 0;
+	setAttr ".phl[200]" 0;
+	setAttr ".phl[201]" 0;
+	setAttr ".phl[202]" 0;
+	setAttr ".phl[203]" 0;
+	setAttr ".phl[204]" 0;
+	setAttr ".phl[205]" 0;
+	setAttr ".phl[206]" 0;
+	setAttr ".phl[207]" 0;
+	setAttr ".phl[208]" 0;
+	setAttr ".phl[209]" 0;
+	setAttr ".phl[210]" 0;
+	setAttr ".phl[211]" 0;
+	setAttr ".phl[212]" 0;
+	setAttr ".phl[213]" 0;
+	setAttr ".phl[214]" 0;
+	setAttr ".phl[215]" 0;
+	setAttr ".phl[216]" 0;
+	setAttr ".phl[217]" 0;
+	setAttr ".phl[218]" 0;
+	setAttr ".phl[219]" 0;
+	setAttr ".phl[220]" 0;
+	setAttr ".phl[221]" 0;
+	setAttr ".phl[222]" 0;
+	setAttr ".phl[223]" 0;
+	setAttr ".phl[224]" 0;
+	setAttr ".phl[225]" 0;
+	setAttr ".phl[226]" 0;
+	setAttr ".phl[227]" 0;
+	setAttr ".phl[228]" 0;
+	setAttr ".phl[229]" 0;
+	setAttr ".phl[230]" 0;
+	setAttr ".phl[231]" 0;
+	setAttr ".phl[232]" 0;
+	setAttr ".phl[233]" 0;
+	setAttr ".phl[234]" 0;
+	setAttr ".phl[235]" 0;
+	setAttr ".phl[236]" 0;
+	setAttr ".phl[237]" 0;
+	setAttr ".phl[238]" 0;
+	setAttr ".phl[239]" 0;
+	setAttr ".phl[240]" 0;
+	setAttr ".phl[241]" 0;
+	setAttr ".phl[242]" 0;
+	setAttr ".phl[243]" 0;
+	setAttr ".phl[244]" 0;
+	setAttr ".phl[245]" 0;
+	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
+	setAttr ".phl[288]" 0;
+	setAttr ".phl[289]" 0;
+	setAttr ".phl[290]" 0;
+	setAttr ".phl[291]" 0;
+	setAttr ".phl[292]" 0;
+	setAttr ".phl[293]" 0;
+	setAttr ".phl[294]" 0;
+	setAttr ".phl[295]" 0;
+	setAttr ".phl[296]" 0;
+	setAttr ".phl[297]" 0;
+	setAttr ".phl[298]" 0;
+	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
+	setAttr ".phl[355]" 0;
+	setAttr ".phl[356]" 0;
+	setAttr ".phl[357]" 0;
+	setAttr ".phl[358]" 0;
+	setAttr ".phl[359]" 0;
+	setAttr ".phl[360]" 0;
+	setAttr ".phl[361]" 0;
+	setAttr ".phl[362]" 0;
+	setAttr ".phl[363]" 0;
+	setAttr ".phl[364]" 0;
+	setAttr ".phl[365]" 0;
+	setAttr ".phl[366]" 0;
+	setAttr ".phl[367]" 0;
+	setAttr ".phl[368]" 0;
+	setAttr ".phl[369]" 0;
+	setAttr ".phl[370]" 0;
+	setAttr ".phl[371]" 0;
+	setAttr ".phl[372]" 0;
+	setAttr ".phl[373]" 0;
+	setAttr ".phl[374]" 0;
+	setAttr ".phl[375]" 0;
+	setAttr ".phl[376]" 0;
+	setAttr ".phl[377]" 0;
+	setAttr ".phl[378]" 0;
+	setAttr ".phl[379]" 0;
+	setAttr ".phl[380]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN"
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" 0
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" 592
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube30Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform129" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape186" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform130" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape187" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform131" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape116" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform132" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape117" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform133" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape119" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform134" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape120" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform135" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape121" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform136" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape122" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform137" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape123" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform138" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape124" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform139" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape126" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform140" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape128" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform141" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape129" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform142" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape130" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform143" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape132" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform144" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape136" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform145" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape138" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform146" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape139" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform147" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape140" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform148" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape143" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform149" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape144" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform150" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape145" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform151" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape146" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform157" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape147" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform158" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape148" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform159" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape149" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform160" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape151" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform161" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape152" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform162" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape153" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform163" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape154" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform164" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape155" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform165" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape156" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform166" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape158" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform152" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape160" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform153" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape161" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform154" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape162" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform155" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape164" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform156" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape168" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform167" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape170" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform168" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape171" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform169" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape172" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform170" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape175" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform171" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape176" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform172" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape177" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform173" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape178" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform174" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape179" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform175" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube57Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform180" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface194Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform181" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface157Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform182" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface156Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform183" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface201Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform176" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface200Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform177" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface133Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform178" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface94Shape" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform179" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube11" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface1" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface2" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface3" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface4" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface5" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface6" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface8" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface9" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface10" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface11" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe13|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface12" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe14|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface13" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe14|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface14" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe14|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface19" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe14|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface20" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe14|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface22" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe14|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface23" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe14|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface24" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pPipe14|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface25" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform129" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube30" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform130" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube32|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface162" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform131" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube32|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface163" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform132" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface92" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform133" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface93" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform134" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface95" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform135" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface96" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform136" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface97" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform137" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface98" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform138" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface99" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform139" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface100" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform140" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface102" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform141" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface104" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform142" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface105" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform143" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface106" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform144" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface108" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform145" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface112" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform146" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface114" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform147" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface115" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform148" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface116" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform149" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface119" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform150" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface120" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform151" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface121" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform157" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface122" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform158" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface123" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform159" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface124" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform160" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface125" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform161" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface127" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform162" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface128" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform163" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface129" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform164" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface130" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform165" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface131" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform166" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface132" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform152" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface134" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform153" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface136" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform154" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface137" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform155" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface138" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform156" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface140" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform167" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface144" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform168" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface146" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform169" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface147" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform170" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface148" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform171" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface151" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform172" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface152" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform173" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface153" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform174" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface154" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform175" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube33|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface155" 
+		"-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform180" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube57" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform181" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface194" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform182" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface157" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform183" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface156" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform176" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface201" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform177" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface200" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform178" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface133" "-s -r "
+		0 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform179" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface94" "-s -r "
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:619]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:2047]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25" 
+		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:119]\""
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform129|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube30Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform130|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape186" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform131|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape187" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform132|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape116" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform133|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape117" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform134|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape119" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform135|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape120" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform136|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape121" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform137|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape122" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform138|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape123" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform139|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape124" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform140|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape126" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform141|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape128" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform142|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape129" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform143|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape130" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform144|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape132" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform145|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape136" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform146|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape138" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform147|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape139" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform148|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape140" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform149|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape143" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform150|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape144" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform151|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape145" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform157|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape146" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform158|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape147" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform159|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape148" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform160|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape149" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform161|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape151" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform162|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape152" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform163|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape153" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform164|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape154" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform165|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape155" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform166|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape156" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform152|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape158" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform153|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape160" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform154|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape161" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform155|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape162" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform156|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape164" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform167|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape168" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform168|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape170" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform169|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape171" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform170|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape172" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform171|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape175" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform172|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape176" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform173|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape177" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform174|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape178" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform175|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape179" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:KrakenSkeletonOctopus_UV_Done:pCube57" 
+		"translate" " -type \"double3\" 24.060595467021088 0 -22.176289075531411"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:KrakenSkeletonOctopus_UV_Done:pCube57" 
+		"rotate" " -type \"double3\" 0 11.803422472017187 0"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:KrakenSkeletonOctopus_UV_Done:pCube57" 
+		"scale" " -type \"double3\" 0.58882450628316696 0.58882450628316696 0.58882450628316696"
+		
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform180|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube57Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform181|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface194Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform182|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface157Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform183|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface156Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform176|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface201Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform177|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface200Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform178|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface133Shape" 
+		"intermediateObject" " 1"
+		2 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform179|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface94Shape" 
+		"intermediateObject" " 1"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		3 "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16.instObjGroups" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "-na"
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform179|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface94Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[1]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform179|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface94Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[2]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform178|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface133Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[3]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform178|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface133Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[4]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform177|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface200Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[5]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform177|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface200Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[6]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform176|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface201Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[7]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform176|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface201Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[8]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform183|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface156Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[9]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform183|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface156Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[10]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform182|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface157Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[11]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform182|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface157Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[12]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform181|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface194Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[13]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform181|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface194Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[14]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform180|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube57Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[15]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform180|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube57Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[16]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform175|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape179.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[17]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform175|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape179.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[18]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform174|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape178.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[19]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform174|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape178.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[20]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform173|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape177.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[21]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform173|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape177.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[22]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform172|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape176.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[23]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform172|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape176.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[24]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform171|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape175.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[25]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform171|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape175.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[26]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform170|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape172.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[27]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform170|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape172.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[28]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform169|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape171.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[29]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform169|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape171.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[30]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform168|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape170.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[31]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform168|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape170.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[32]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform167|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape168.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[33]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform167|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape168.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[34]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform156|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape164.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[35]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform156|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape164.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[36]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform155|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape162.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[37]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform155|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape162.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[38]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform154|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape161.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[39]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform154|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape161.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[40]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform153|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape160.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[41]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform153|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape160.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[42]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform152|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape158.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[43]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform152|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape158.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[44]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform166|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape156.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[45]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform166|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape156.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[46]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform165|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape155.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[47]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform165|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape155.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[48]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform164|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape154.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[49]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform164|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape154.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[50]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform163|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape153.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[51]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform163|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape153.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[52]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform162|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape152.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[53]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform162|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape152.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[54]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform161|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape151.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[55]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform161|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape151.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[56]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform160|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape149.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[57]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform160|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape149.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[58]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform159|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape148.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[59]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform159|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape148.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[60]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform158|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape147.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[61]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform158|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape147.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[62]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform157|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape146.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[63]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform157|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape146.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[64]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform151|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape145.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[65]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform151|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape145.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[66]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform150|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape144.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[67]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform150|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape144.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[68]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform149|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape143.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[69]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform149|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape143.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[70]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform148|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape140.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[71]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform148|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape140.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[72]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform147|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape139.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[73]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform147|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape139.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[74]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform146|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape138.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[75]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform146|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape138.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[76]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform145|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape136.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[77]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform145|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape136.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[78]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform144|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape132.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[79]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform144|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape132.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[80]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform143|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape130.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[81]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform143|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape130.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[82]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform142|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape129.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[83]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform142|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape129.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[84]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform141|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape128.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[85]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform141|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape128.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[86]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform140|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape126.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[87]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform140|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape126.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[88]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform139|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape124.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[89]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform139|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape124.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[90]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform138|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape123.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[91]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform138|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape123.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[92]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform137|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape122.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[93]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform137|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape122.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[94]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform136|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape121.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[95]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform136|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape121.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[96]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform135|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape120.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[97]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform135|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape120.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[98]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform134|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape119.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[99]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform134|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape119.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[100]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform133|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape117.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[101]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform133|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape117.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[102]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform132|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape116.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[103]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform132|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape116.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[104]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform131|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape187.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[105]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform131|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape187.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[106]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform130|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape186.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[107]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform130|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape186.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[108]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform129|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube30Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[109]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform129|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube30Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[110]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[111]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[112]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[113]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[114]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[115]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[116]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[117]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[118]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[119]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[120]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[121]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[122]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[123]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[124]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[125]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[126]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[127]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[128]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[129]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[130]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[131]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[132]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[133]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[134]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[135]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[136]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[137]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[138]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[139]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[140]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[141]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[142]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[143]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[144]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[145]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[146]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[147]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[148]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[149]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[150]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[151]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[152]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[153]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[154]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[155]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[156]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[157]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[158]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[159]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[160]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[161]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[162]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[163]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[164]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[165]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[166]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[167]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[168]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[169]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[170]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[171]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[172]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[173]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[174]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[175]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[176]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[177]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[178]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[179]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[180]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[181]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[182]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[183]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[184]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[185]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[186]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[187]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[188]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[189]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[190]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[191]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[192]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[193]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[194]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[195]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[196]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[197]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[198]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[199]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[200]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[201]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[202]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[203]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[204]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[205]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[206]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[207]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[208]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[209]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[210]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[211]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[212]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[213]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[214]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[215]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[216]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[217]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[218]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[219]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[220]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[221]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[222]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[223]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[224]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[225]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[226]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[227]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[228]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[229]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[230]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[231]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[232]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[233]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[234]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[235]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[236]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[237]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[238]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[239]" 
+		""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape.outMesh" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[240]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape.worldMatrix" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[241]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[242]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.memberWireframeColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[243]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[244]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[245]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform198|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape10.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[246]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[247]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[248]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[249]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform196|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape7.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[250]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[251]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[252]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[253]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform195|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape9.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[254]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[255]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[256]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[257]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform194|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape8.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[258]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[259]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[260]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[261]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform193|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape15.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[262]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[263]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[264]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[265]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform192|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape11.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[266]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[267]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[268]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[269]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform191|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape14.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[270]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[271]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[272]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[273]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform190|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape13.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[274]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[275]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[276]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[277]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform189|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape12.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[278]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[279]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[280]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[281]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform188|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape6.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[282]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[283]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[284]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[285]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform187|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape5.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[286]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[287]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[288]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[289]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform186|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape4.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[290]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[291]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[292]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[293]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform185|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCubeShape8.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[294]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[295]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[296]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[297]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform184|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:pCube10Shape.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[298]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[299]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[300]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[301]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform128|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[302]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[303]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[304]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[305]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform127|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape27.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[306]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[307]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[308]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[309]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform126|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape26.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[310]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[311]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[312]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[313]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform125|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape25.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[314]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[315]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[316]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[317]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform124|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape23.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[318]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[319]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[320]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[321]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform123|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape22.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[322]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[323]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[324]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[325]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform122|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape17.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[326]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[327]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16.instObjGroups.objectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[328]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[329]" ""
+		5 0 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "|KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:transform121|KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurfaceShape16.compInstObjGroups.compObjectGroups[0]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[330]" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[331]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.dagSetMembers" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[332]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[333]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[334]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[335]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[336]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[337]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[338]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[339]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[340]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[341]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[342]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[343]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[344]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[345]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[346]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[347]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[348]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[349]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[350]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[351]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[352]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[353]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[354]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[355]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[356]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[357]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[358]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[359]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[360]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[361]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[362]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[363]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[364]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[365]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[366]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[367]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[368]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[369]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[370]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[371]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[372]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[373]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[374]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[375]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[376]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:lambert2SG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[377]" ""
+		5 3 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:SkeletonBlackShaderSG.memberWireframeColor" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[378]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:SkeletonBlackShaderSG.groupNodes" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[379]" ""
+		5 4 "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:SkeletonBlackShaderSG.dagSetMembers" 
+		"KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.placeHolderList[380]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode polyUnite -n "polyUnite2";
+	rename -uid "EC7D4B57-4F89-9716-CDC3-0D81A304E0F5";
+	setAttr -s 78 ".ip";
+	setAttr -s 78 ".im";
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId263";
+	rename -uid "81BC966E-4D2F-B653-553F-8AB861F36A26";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId264";
+	rename -uid "4F906827-40E5-A295-6AB9-9BB89D6AD069";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId265";
+	rename -uid "70F25247-4EDD-9A0E-3195-6BAC41A37998";
+	setAttr ".ihi" 0;
+createNode groupParts -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts163";
+	rename -uid "E97E359D-45D2-4AF6-8176-56BFC03D1930";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:69]";
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId266";
+	rename -uid "3CC78DF8-4205-F301-C741-AFB05C5BA70B";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId267";
+	rename -uid "7D63F767-48FF-C7FB-39BD-72B8675446F0";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId268";
+	rename -uid "5DF63A3E-4CF0-2B89-6405-E7A5524CC7A8";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId269";
+	rename -uid "7D37BC61-40DB-7C1B-929B-EFA7F69B442B";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId270";
+	rename -uid "143759EE-4679-F02A-AB81-9BBD2DC64B6E";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId271";
+	rename -uid "7E67261A-4B70-34E1-7E2B-53802731E0C3";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId272";
+	rename -uid "F8F69D38-41CF-16E9-11B2-91833F3A986F";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId273";
+	rename -uid "5AB272D0-4D8B-5FC3-C07E-77AE31244EBC";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId274";
+	rename -uid "0059A87B-438C-FEA4-C976-698D5B3C9D0E";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId275";
+	rename -uid "0BB9BF46-47D1-6612-1E0D-DAB8A3DB6A52";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId276";
+	rename -uid "F0D7DCA3-4BFA-2315-F1C8-A7B92312E6E2";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId277";
+	rename -uid "8BAE701B-465A-563E-7521-54BEE8BA8CBB";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId278";
+	rename -uid "BD6DEB85-4526-BE2B-186F-888EABDFB59C";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId279";
+	rename -uid "20B84118-4A0A-A88E-5F3E-B0999CBA1B32";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId280";
+	rename -uid "E2471017-4E6B-B46C-3031-0299A56B241A";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId281";
+	rename -uid "3AB67D47-4E7A-CD2C-3EC8-A791522D2C7F";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId282";
+	rename -uid "D46E7927-4361-17E2-86D1-E1890822D76C";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId283";
+	rename -uid "1355663F-4149-3AD2-2B97-919DE72BA9DB";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId284";
+	rename -uid "3FB8CEF9-4B88-667B-A453-F0BFD367067C";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId285";
+	rename -uid "96E2D4BC-4C9B-245B-1B85-188D95BC4E0A";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId286";
+	rename -uid "3196ADD4-4371-855D-ACB6-F4B193374337";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId287";
+	rename -uid "E41587F5-476C-C764-4987-44BD85239EFD";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId288";
+	rename -uid "53DCA07A-4EE2-DED7-1D6E-8D9BA92A8BC3";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId289";
+	rename -uid "98D5BC5A-41C0-663D-58F4-9999FD61DC80";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId290";
+	rename -uid "F939E019-4542-7A3C-EBF3-669FDF8F52BD";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId291";
+	rename -uid "175F9AAD-4717-A665-91B0-3B8D871E1BC1";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId292";
+	rename -uid "74472DD6-4EF8-C04A-C089-1B92E2721B2F";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId293";
+	rename -uid "338F1367-4952-A891-B8B0-E2AB3901BCDF";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId294";
+	rename -uid "320FA83F-45B3-2FFE-3E9D-1E9CE61B18A8";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId295";
+	rename -uid "5E3064C3-4C7D-F4A6-0F69-E0B34145DC46";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId296";
+	rename -uid "DF42ABC9-450E-F402-A7A1-B08BD9C5D701";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId297";
+	rename -uid "0C284603-455E-1846-7346-D4AB3EF7F8AA";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId298";
+	rename -uid "5B276429-45C5-6A1F-45A8-569A77F663BE";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId299";
+	rename -uid "16E61838-4919-7ACE-DFF8-C482E7D2BFBE";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId300";
+	rename -uid "9EF3C8F5-4B8E-3EC2-2A17-AE835AC312E7";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId301";
+	rename -uid "DE5E794A-4FBE-474C-0A36-0B86B33CA204";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId302";
+	rename -uid "DDA1697C-4A1C-61EF-58A9-ED9F10F242CF";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId303";
+	rename -uid "958B25CB-4505-5668-5C37-FBAC1D690628";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId304";
+	rename -uid "65E05330-4D4D-B49D-F4BC-0A9B33F5942E";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId305";
+	rename -uid "DBFA07F0-40E2-4B40-1D3F-1E9879CD27B8";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId306";
+	rename -uid "025684DF-4C4B-37D5-9191-D18E3816D07B";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId307";
+	rename -uid "4C272FE9-4A5A-F41A-8101-6B9108325280";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId308";
+	rename -uid "9506C24C-4725-009A-37FC-F5AA18D79CC6";
+	setAttr ".ihi" 0;
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId309";
+	rename -uid "D23FFFFE-45F5-D119-C9B1-4493F0B8AC77";
+	setAttr ".ihi" 0;
+createNode groupParts -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts164";
+	rename -uid "B68694A9-4CCE-2ED2-FFB1-8D961F5C8EE3";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 32 "f[0:119]" "f[190:21781]" "f[21783:21794]" "f[21796:21800]" "f[21802:21805]" "f[21807:21812]" "f[21817:21822]" "f[21827:21832]" "f[21837:21844]" "f[21849:21856]" "f[21861:21868]" "f[21875:21882]" "f[22009]" "f[22011:22016]" "f[22018:22020]" "f[22022:22023]" "f[22039:22144]" "f[22146:22157]" "f[22159:22163]" "f[22165:22168]" "f[22170:22175]" "f[22180:22185]" "f[22190:22195]" "f[22200:22207]" "f[22212:22219]" "f[22224:22231]" "f[22238:22245]" "f[22372]" "f[22374:22379]" "f[22381:22383]" "f[22385:22386]" "f[22402:23481]";
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId310";
+	rename -uid "800E0066-4621-3974-13B1-D5AC7658B710";
+	setAttr ".ihi" 0;
+createNode groupParts -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts165";
+	rename -uid "6D662B39-400D-9489-E501-9C92A18DCB61";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[120:189]";
+createNode groupId -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId311";
+	rename -uid "D8E500E8-4123-762D-A88F-F39E3B07FC31";
+	setAttr ".ihi" 0;
+createNode groupParts -n "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts166";
+	rename -uid "949F5D5F-4A75-DD76-091F-E485BFBA2CD7";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 30 "f[21782]" "f[21795]" "f[21801]" "f[21806]" "f[21813:21816]" "f[21823:21826]" "f[21833:21836]" "f[21845:21848]" "f[21857:21860]" "f[21869:21874]" "f[21883:22008]" "f[22010]" "f[22017]" "f[22021]" "f[22024:22038]" "f[22145]" "f[22158]" "f[22164]" "f[22169]" "f[22176:22179]" "f[22186:22189]" "f[22196:22199]" "f[22208:22211]" "f[22220:22223]" "f[22232:22237]" "f[22246:22371]" "f[22373]" "f[22380]" "f[22384]" "f[22387:22401]";
+createNode reference -n "Shark_GreatWhite_model_007RN";
+	rename -uid "1CC2ED6B-4AF8-BD15-6760-6192FD12D98B";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Shark_GreatWhite_model_007RN"
+		"Shark_GreatWhite_model_007RN" 0
+		"Shark_GreatWhite_model_007RN" 2
+		2 "|Shark_GreatWhite_model_007:pCube8" "translate" " -type \"double3\" -28.909762639636714 9.917958728046667 0"
+		
+		2 "|Shark_GreatWhite_model_007:pCube8" "rotate" " -type \"double3\" 4.0282245113165089 173.65362524405205 12.080364431770095";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "hammerheadsharkRN";
+	rename -uid "6404CC1B-48D9-EE04-388E-C3872D5198DB";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"hammerheadsharkRN"
+		"hammerheadsharkRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -4302,15 +7561,22 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 3 ".st";
+	setAttr -s 20 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 5 ".s";
+	setAttr -s 22 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -s 3 ".u";
 select -ne :defaultRenderingList1;
+	setAttr -s 7 ".r";
+select -ne :defaultTextureList1;
+	setAttr -s 3 ".tx";
 select -ne :initialShadingGroup;
+	setAttr -s 140 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 140 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultResolution;
@@ -4318,8 +7584,647 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts163.og" "Fish_Angler_01RN.phl[1]"
+		;
+connectAttr "Fish_Angler_01RN.phl[2]" "polyUnite2.im[1]";
+connectAttr "Fish_Angler_01RN.phl[3]" ":initialShadingGroup.dsm" -na;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId265.id" "Fish_Angler_01RN.phl[4]"
+		;
+connectAttr ":initialShadingGroup.mwc" "Fish_Angler_01RN.phl[5]";
+connectAttr "Fish_Angler_01RN.phl[6]" "polyUnite2.ip[1]";
+connectAttr "Fish_Angler_01RN.phl[7]" ":initialShadingGroup.dsm" -na;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId266.id" "Fish_Angler_01RN.phl[8]"
+		;
+connectAttr "Fish_Angler_01RN.phl[9]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts163.ig"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[1]" "polyUnite2.ip[19]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[2]" "polyUnite2.im[19]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[3]" "polyUnite2.ip[20]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[4]" "polyUnite2.im[20]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[5]" "polyUnite2.ip[21]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[6]" "polyUnite2.im[21]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[7]" "polyUnite2.ip[22]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[8]" "polyUnite2.im[22]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[9]" "polyUnite2.ip[15]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[10]" "polyUnite2.im[15]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[11]" "polyUnite2.ip[16]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[12]" "polyUnite2.im[16]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[13]" "polyUnite2.ip[17]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[14]" "polyUnite2.im[17]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[15]" "polyUnite2.ip[18]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[16]" "polyUnite2.im[18]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[17]" "polyUnite2.ip[23]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[18]" "polyUnite2.im[23]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[19]" "polyUnite2.ip[24]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[20]" "polyUnite2.im[24]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[21]" "polyUnite2.ip[25]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[22]" "polyUnite2.im[25]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[23]" "polyUnite2.ip[26]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[24]" "polyUnite2.im[26]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[25]" "polyUnite2.ip[27]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[26]" "polyUnite2.im[27]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[27]" "polyUnite2.ip[28]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[28]" "polyUnite2.im[28]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[29]" "polyUnite2.ip[29]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[30]" "polyUnite2.im[29]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[31]" "polyUnite2.ip[30]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[32]" "polyUnite2.im[30]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[33]" "polyUnite2.ip[31]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[34]" "polyUnite2.im[31]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[35]" "polyUnite2.ip[42]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[36]" "polyUnite2.im[42]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[37]" "polyUnite2.ip[43]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[38]" "polyUnite2.im[43]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[39]" "polyUnite2.ip[44]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[40]" "polyUnite2.im[44]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[41]" "polyUnite2.ip[45]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[42]" "polyUnite2.im[45]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[43]" "polyUnite2.ip[46]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[44]" "polyUnite2.im[46]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[45]" "polyUnite2.ip[32]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[46]" "polyUnite2.im[32]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[47]" "polyUnite2.ip[33]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[48]" "polyUnite2.im[33]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[49]" "polyUnite2.ip[34]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[50]" "polyUnite2.im[34]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[51]" "polyUnite2.ip[35]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[52]" "polyUnite2.im[35]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[53]" "polyUnite2.ip[36]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[54]" "polyUnite2.im[36]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[55]" "polyUnite2.ip[37]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[56]" "polyUnite2.im[37]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[57]" "polyUnite2.ip[38]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[58]" "polyUnite2.im[38]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[59]" "polyUnite2.ip[39]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[60]" "polyUnite2.im[39]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[61]" "polyUnite2.ip[40]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[62]" "polyUnite2.im[40]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[63]" "polyUnite2.ip[41]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[64]" "polyUnite2.im[41]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[65]" "polyUnite2.ip[47]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[66]" "polyUnite2.im[47]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[67]" "polyUnite2.ip[48]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[68]" "polyUnite2.im[48]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[69]" "polyUnite2.ip[49]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[70]" "polyUnite2.im[49]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[71]" "polyUnite2.ip[50]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[72]" "polyUnite2.im[50]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[73]" "polyUnite2.ip[51]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[74]" "polyUnite2.im[51]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[75]" "polyUnite2.ip[52]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[76]" "polyUnite2.im[52]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[77]" "polyUnite2.ip[53]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[78]" "polyUnite2.im[53]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[79]" "polyUnite2.ip[54]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[80]" "polyUnite2.im[54]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[81]" "polyUnite2.ip[55]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[82]" "polyUnite2.im[55]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[83]" "polyUnite2.ip[56]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[84]" "polyUnite2.im[56]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[85]" "polyUnite2.ip[57]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[86]" "polyUnite2.im[57]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[87]" "polyUnite2.ip[58]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[88]" "polyUnite2.im[58]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[89]" "polyUnite2.ip[59]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[90]" "polyUnite2.im[59]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[91]" "polyUnite2.ip[60]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[92]" "polyUnite2.im[60]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[93]" "polyUnite2.ip[61]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[94]" "polyUnite2.im[61]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[95]" "polyUnite2.ip[62]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[96]" "polyUnite2.im[62]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[97]" "polyUnite2.ip[63]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[98]" "polyUnite2.im[63]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[99]" "polyUnite2.ip[64]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[100]" "polyUnite2.im[64]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[101]" "polyUnite2.ip[65]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[102]" "polyUnite2.im[65]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[103]" "polyUnite2.ip[66]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[104]" "polyUnite2.im[66]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[105]" "polyUnite2.ip[67]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[106]" "polyUnite2.im[67]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[107]" "polyUnite2.ip[68]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[108]" "polyUnite2.im[68]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[109]" "polyUnite2.ip[69]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[110]" "polyUnite2.im[69]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId293.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[111]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[112]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[113]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[114]" "polyUnite2.ip[70]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[115]" "polyUnite2.im[70]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId294.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[116]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId295.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[117]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[118]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[119]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[120]" "polyUnite2.ip[71]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[121]" "polyUnite2.im[71]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId296.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[122]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId297.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[123]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[124]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[125]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[126]" "polyUnite2.ip[72]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[127]" "polyUnite2.im[72]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId298.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[128]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId299.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[129]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[130]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[131]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[132]" "polyUnite2.ip[73]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[133]" "polyUnite2.im[73]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId300.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[134]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId301.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[135]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[136]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[137]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[138]" "polyUnite2.ip[74]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[139]" "polyUnite2.im[74]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId302.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[140]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId303.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[141]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[142]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[143]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[144]" "polyUnite2.ip[75]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[145]" "polyUnite2.im[75]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId304.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[146]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId305.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[147]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[148]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[149]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[150]" "polyUnite2.ip[76]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[151]" "polyUnite2.im[76]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId306.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[152]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId307.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[153]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[154]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[155]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[156]" "polyUnite2.ip[77]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[157]" "polyUnite2.im[77]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId308.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[158]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId273.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[159]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[160]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[161]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[162]" "polyUnite2.ip[5]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[163]" "polyUnite2.im[5]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId274.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[164]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId277.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[165]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[166]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[167]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[168]" "polyUnite2.ip[7]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[169]" "polyUnite2.im[7]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId278.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[170]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId279.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[171]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[172]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[173]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[174]" "polyUnite2.ip[8]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[175]" "polyUnite2.im[8]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId280.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[176]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId281.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[177]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[178]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[179]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[180]" "polyUnite2.ip[9]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[181]" "polyUnite2.im[9]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId282.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[182]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId275.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[183]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[184]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[185]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[186]" "polyUnite2.ip[6]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[187]" "polyUnite2.im[6]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId276.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[188]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId263.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[189]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[190]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[191]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[192]" "polyUnite2.ip[0]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[193]" "polyUnite2.im[0]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId264.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[194]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId269.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[195]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[196]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[197]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[198]" "polyUnite2.ip[3]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[199]" "polyUnite2.im[3]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId270.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[200]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId271.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[201]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[202]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[203]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[204]" "polyUnite2.ip[4]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[205]" "polyUnite2.im[4]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId272.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[206]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId267.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[207]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[208]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[209]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[210]" "polyUnite2.ip[2]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[211]" "polyUnite2.im[2]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId268.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[212]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId283.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[213]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[214]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[215]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[216]" "polyUnite2.ip[10]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[217]" "polyUnite2.im[10]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId284.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[218]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId285.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[219]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[220]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[221]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[222]" "polyUnite2.ip[11]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[223]" "polyUnite2.im[11]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId286.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[224]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId287.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[225]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[226]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[227]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[228]" "polyUnite2.ip[12]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[229]" "polyUnite2.im[12]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId288.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[230]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId289.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[231]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[232]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[233]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[234]" "polyUnite2.ip[13]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[235]" "polyUnite2.im[13]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId290.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[236]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId291.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[237]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[238]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[239]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[240]" "polyUnite2.ip[14]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[241]" "polyUnite2.im[14]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId292.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[242]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[243]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[0].gco"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[244]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[245]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[246]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[247]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[248]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[249]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[250]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[251]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[252]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[253]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[254]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[255]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[256]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[257]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[258]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[259]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[260]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[261]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[262]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[263]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[264]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[265]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[266]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[267]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[268]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[269]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[270]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[271]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[272]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[273]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[274]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[275]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[276]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[277]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[278]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[279]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[280]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[281]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[282]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[283]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[284]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[285]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[286]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[287]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[288]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[289]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[290]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[291]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[292]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[293]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[294]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[295]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[296]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[297]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[298]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[299]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[300]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[301]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[302]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[303]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[304]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[305]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[306]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[307]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[308]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[309]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[310]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[311]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[312]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[313]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[314]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[315]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[316]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[317]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[318]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[319]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[320]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[321]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[322]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[323]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[324]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[325]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[326]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[327]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[328]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[329]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[330]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[331]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[0]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[332]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId263.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[333]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId264.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[334]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId267.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[335]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId268.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[336]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId269.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[337]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId270.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[338]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId271.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[339]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId272.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[340]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId273.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[341]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId274.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[342]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId275.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[343]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId276.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[344]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId277.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[345]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId278.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[346]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId279.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[347]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId280.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[348]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId281.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[349]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId282.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[350]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId283.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[351]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId284.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[352]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId285.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[353]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId286.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[354]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId287.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[355]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId288.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[356]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId289.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[357]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId290.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[358]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId291.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[359]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId292.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[360]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId293.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[361]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId294.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[362]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId295.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[363]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId296.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[364]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId297.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[365]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId298.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[366]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId299.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[367]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId300.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[368]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId301.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[369]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId302.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[370]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId303.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[371]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId304.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[372]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId305.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[373]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId306.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[374]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId307.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[375]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId308.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[376]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId309.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[377]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[378]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[2].gco"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId311.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[379]"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[2]" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.phl[380]"
+		;
 connectAttr "groupId1.id" "pCubeShape1.iog.og[0].gid";
 connectAttr "blinn1SG.mwc" "pCubeShape1.iog.og[0].gco";
 connectAttr "groupParts1.og" "pCubeShape1.i";
@@ -4349,6 +8254,16 @@ connectAttr "polyTweakUV11.out" "pCube2Shape.i";
 connectAttr "groupId11.id" "pCube2Shape.iog.og[0].gid";
 connectAttr "blinn1SG.mwc" "pCube2Shape.iog.og[0].gco";
 connectAttr "polyTweakUV11.uvtk[0]" "pCube2Shape.uvst[0].uvtw";
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts166.og" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.i"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId309.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[0].gid"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId310.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[1].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[1].gco"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId311.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[2].gid"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -4397,7 +8312,6 @@ connectAttr "polyExtrudeFace10.out" "polyTweak11.ip";
 connectAttr "polyTweak12.out" "polyExtrudeFace12.ip";
 connectAttr "pCylinderShape1.wm" "polyExtrudeFace12.mp";
 connectAttr "polyExtrudeFace11.out" "polyTweak12.ip";
-connectAttr "sharedReferenceNode.sr" "CannonRN.sr";
 connectAttr "blinn1.oc" "blinn1SG.ss";
 connectAttr "pCubeShape1.iog.og[0]" "blinn1SG.dsm" -na;
 connectAttr "pCubeShape1.ciog.cog[0]" "blinn1SG.dsm" -na;
@@ -4486,7 +8400,33 @@ connectAttr "groupId9.id" "groupParts5.gi";
 connectAttr "polyUnite1.out" "groupParts6.ig";
 connectAttr "groupId11.id" "groupParts6.gi";
 connectAttr "groupParts6.og" "polyTweakUV11.ip";
+connectAttr "sharedReferenceNode.sr" "CannonRN.sr";
+connectAttr "Fish_Angler_01RNfosterParent1.msg" "Fish_Angler_01RN.fp";
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRNfosterParent1.msg" "KrakenandSkeleton_Colored_Done_NOPOSEORRIGRN.fp"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId265.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts163.gi"
+		;
+connectAttr "polyUnite2.out" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts164.ig"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId309.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts164.gi"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts164.og" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts165.ig"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId310.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts165.gi"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts165.og" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts166.ig"
+		;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId311.id" "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupParts166.gi"
+		;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:polySurface7Shape.iog.og[1]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId265.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId266.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "KrakenandSkeleton_Colored_Done_NOPOSEORRIG:groupId310.msg" ":initialShadingGroup.gn"
+		 -na;
 // End of NguyenMerry_BathtubPirates.ma
