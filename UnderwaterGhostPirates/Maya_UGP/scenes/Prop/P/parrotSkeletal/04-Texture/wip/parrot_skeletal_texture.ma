@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
-//Name: parrot_skeletal.ma
-//Last modified: Tue, May 01, 2018 05:45:55 PM
+//Name: parrot_skeletal_texture.ma
+//Last modified: Tue, May 01, 2018 05:46:13 PM
 //Codeset: 1252
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -7804,4 +7804,4 @@ connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
-// End of parrot_skeletal.ma
+// End of parrot_skeletal_texture.ma
